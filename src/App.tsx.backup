@@ -1,0 +1,367 @@
+import { useState } from 'react'
+import {
+  AppContainer,
+  TopBanner,
+  BannerText,
+  BannerArrow,
+  HeroSection,
+  Logo,
+  Tagline,
+  MainQuestion,
+  CountriesContainer,
+  CountryCard,
+  CardBackground,
+  CountryName,
+  CountryDescription,
+  CheckmarkIcon,
+  ContinueButton,
+  NavigationArrows,
+  ArrowButton,
+  BackButton,
+  DestinationCard,
+  DestinationImage,
+  DestinationInfo,
+  DestinationTitle,
+  DestinationSubtitle,
+  DestinationDescription
+} from './styles/AppStyles'
+
+function App() {
+  const [currentSlide, setCurrentSlide] = useState(0)
+  const [selectedCountry, setSelectedCountry] = useState<string>('')
+  const [selectedDestinations, setSelectedDestinations] = useState<string[]>([])
+  const [showDestinations, setShowDestinations] = useState(false)
+  const [showBudget, setShowBudget] = useState(false)
+  const [selectedBudget, setSelectedBudget] = useState<string>('')
+
+  const budgetOptions = [
+    {
+      name: "Value",
+      price: "$2.5K USD per person",
+      description: "Basic, comfortable lodging at an affordable price.",
+      image: "https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      name: "Comfort", 
+      price: "$2.5K - $4.5K USD per person",
+      description: "Mid-range accommodations with extra amenities.",
+      image: "https://images.unsplash.com/photo-1571896349842-33c89424de2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      name: "Luxury",
+      price: "$4.5K - $9K USD per person", 
+      description: "High-end lodges offering premium service.",
+      image: "https://images.unsplash.com/photo-1582719508461-905c673771fd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      name: "Exclusive",
+      price: "$10K+ USD per person",
+      description: "Top-tier, private, and personalized luxury.",
+      image: "https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    }
+  ]
+
+  const destinations = {
+    TANZANIA: [
+      {
+        name: "Tarangire National Park",
+        subtitle: "Tarangire National Park",
+        description: "Tarangire National Park is a wildlife sanctuary in northern Tanzania known for its diverse landscape of savanna, swamps, and baobab trees.",
+        image: "https://images.unsplash.com/photo-1516426122078-c23e76319801?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        name: "Mount Kilimanjaro",
+        subtitle: "Mount Kilimanjaro", 
+        description: "Africa's highest peak, offering treks through diverse ecosystems.",
+        image: "https://images.unsplash.com/photo-1585741019003-0b019b03ee88?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        name: "Ngorongoro Crater",
+        subtitle: "Ngorongoro Crater",
+        description: "Ngorongoro Crater is a natural amphitheater of unparalleled beauty",
+        image: "https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        name: "Serengeti National Park",
+        subtitle: "Serengeti National Park", 
+        description: "Home to Africa's most fascinating wildlife phenomenon, the Great Migration.",
+        image: "https://images.unsplash.com/photo-1549366021-9f761d040a94?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      }
+    ],
+    KENYA: [
+      {
+        name: "Maasai Mara",
+        subtitle: "Maasai Mara National Reserve",
+        description: "World-famous for the Great Migration and incredible wildlife viewing.",
+        image: "https://images.unsplash.com/photo-1549366021-9f761d040a94?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        name: "Amboseli National Park",
+        subtitle: "Amboseli National Park",
+        description: "Best views of Mount Kilimanjaro and large elephant herds.",
+        image: "https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      }
+    ],
+    UGANDA: [
+      {
+        name: "Bwindi Impenetrable Forest",
+        subtitle: "Bwindi Impenetrable National Park",
+        description: "Home to endangered mountain gorillas in ancient rainforest.",
+        image: "https://images.unsplash.com/photo-1551632811-561732d1e306?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        name: "Queen Elizabeth National Park", 
+        subtitle: "Queen Elizabeth National Park",
+        description: "Uganda's most popular savanna park with diverse ecosystems.",
+        image: "https://images.unsplash.com/photo-1547036967-23d11aacaee0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      }
+    ],
+    RWANDA: [
+      {
+        name: "Volcanoes National Park",
+        subtitle: "Volcanoes National Park", 
+        description: "Mountain gorilla trekking in the Virunga Mountains.",
+        image: "https://images.unsplash.com/photo-1547036967-23d11aacaee0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        name: "Akagera National Park",
+        subtitle: "Akagera National Park",
+        description: "Rwanda's only savanna park with the Big Five.",
+        image: "https://images.unsplash.com/photo-1551632811-561732d1e306?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      }
+    ]
+  }
+
+  const countries = [
+    {
+      name: "TANZANIA",
+      description: "Experience the Serengeti and Mount Kilimanjaro",
+      image: "https://images.unsplash.com/photo-1516426122078-c23e76319801?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      name: "KENYA", 
+      description: "The heart of safari adventures",
+      image: "https://images.unsplash.com/photo-1549366021-9f761d040a94?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      name: "UGANDA",
+      description: "The Pearl of Africa", 
+      image: "https://images.unsplash.com/photo-1551632811-561732d1e306?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      name: "RWANDA",
+      description: "Land of a thousand hills",
+      image: "https://images.unsplash.com/photo-1547036967-23d11aacaee0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    }
+  ]
+
+  const handleCountryClick = (countryName: string) => {
+    if (selectedCountry === countryName) {
+      setSelectedCountry('') // Deselect if clicking the same country
+    } else {
+      setSelectedCountry(countryName) // Select the new country
+    }
+  }
+
+  const handleDestinationClick = (destinationName: string) => {
+    setSelectedDestinations(prev => {
+      if (prev.includes(destinationName)) {
+        return prev.filter(dest => dest !== destinationName)
+      } else {
+        return [...prev, destinationName]
+      }
+    })
+  }
+
+  const handleBudgetClick = (budgetName: string) => {
+    if (selectedBudget === budgetName) {
+      setSelectedBudget('') // Deselect if clicking the same budget
+    } else {
+      setSelectedBudget(budgetName) // Select the new budget
+    }
+  }
+
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % countries.length)
+  }
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + countries.length) % countries.length)
+  }
+
+  const handleContinue = () => {
+    if (showBudget) {
+      console.log('Selected budget:', selectedBudget)
+      alert(`Perfect! You selected: ${selectedBudget} budget`)
+    } else if (showDestinations) {
+      console.log('Selected destinations:', selectedDestinations)
+      setShowBudget(true)
+    } else {
+      console.log('Selected country:', selectedCountry)
+      setShowDestinations(true)
+    }
+  }
+
+  const handleBack = () => {
+    if (showBudget) {
+      setShowBudget(false)
+      setSelectedBudget('')
+    } else if (showDestinations) {
+      setShowDestinations(false)
+      setSelectedDestinations([])
+    }
+  }
+
+  return (
+    <AppContainer>
+      <TopBanner>
+        <BannerText>Are you a travel agency or a travel agent? Check us out here!</BannerText>
+        <BannerArrow>▼</BannerArrow>
+      </TopBanner>
+
+      <HeroSection>
+        {(showDestinations || showBudget) && (
+          <BackButton onClick={handleBack}>
+            ← BACK
+          </BackButton>
+        )}
+        
+        <Logo>
+          CLOUDSAFARI, INC.
+          <span className="script">Concierge</span>
+        </Logo>
+        
+        <Tagline>YOUR PERSONAL SAFARI PLANNER</Tagline>
+        
+        <MainQuestion>
+          {showBudget 
+            ? "WHAT BUDGET FITS YOUR TRAVEL STYLE?"
+            : showDestinations 
+            ? "WHICH DESTINATIONS DO YOU WANT TO SEE?"
+            : "WHICH COUNTRIES DO YOU WANT TO VISIT?"
+          }
+        </MainQuestion>
+
+        {!showDestinations && (
+          <>
+            <CountriesContainer>
+              {countries.map((country, index) => (
+                <CountryCard 
+                  key={index} 
+                  isSelected={selectedCountry === country.name}
+                  onClick={() => handleCountryClick(country.name)}
+                >
+                  <CardBackground bgImage={country.image}>
+                    <CheckmarkIcon show={selectedCountry === country.name} />
+                    <CountryName>{country.name}</CountryName>
+                    <CountryDescription>{country.description}</CountryDescription>
+                  </CardBackground>
+                </CountryCard>
+              ))}
+            </CountriesContainer>
+
+            <NavigationArrows>
+              <ArrowButton onClick={prevSlide}>
+                ‹
+              </ArrowButton>
+              <ArrowButton onClick={nextSlide}>
+                ›
+              </ArrowButton>
+            </NavigationArrows>
+          </>
+        )}
+
+        {showDestinations && selectedCountry && (
+          <>
+            <div style={{ textAlign: 'center', marginBottom: '20px', color: 'white', opacity: 0.8 }}>
+              Not sure what you want to see?
+            </div>
+            <div style={{ textAlign: 'center', marginBottom: '40px' }}>
+              <button style={{ 
+                background: 'none', 
+                border: '2px solid white', 
+                color: 'white', 
+                padding: '12px 24px',
+                borderRadius: '4px',
+                cursor: 'pointer',
+                fontSize: '14px',
+                fontWeight: 'bold'
+              }}>
+                Pick destinations for me
+              </button>
+            </div>
+            
+            <CountriesContainer>
+              {destinations[selectedCountry as keyof typeof destinations]?.map((destination, index) => (
+                <DestinationCard 
+                  key={index}
+                  isSelected={selectedDestinations.includes(destination.name)}
+                  onClick={() => handleDestinationClick(destination.name)}
+                >
+                  <DestinationImage bgImage={destination.image}>
+                    <CheckmarkIcon show={selectedDestinations.includes(destination.name)} />
+                  </DestinationImage>
+                  <DestinationInfo>
+                    <DestinationTitle>{destination.name}</DestinationTitle>
+                    <DestinationSubtitle>{destination.subtitle}</DestinationSubtitle>
+                    <DestinationDescription>{destination.description}</DestinationDescription>
+                  </DestinationInfo>
+                </DestinationCard>
+              ))}
+            </CountriesContainer>
+
+            <NavigationArrows>
+              <ArrowButton onClick={prevSlide}>
+                ‹
+              </ArrowButton>
+              <ArrowButton onClick={nextSlide}>
+                ›
+              </ArrowButton>
+            </NavigationArrows>
+          </>
+        )}
+
+        {showBudget && (
+          <>            
+            <CountriesContainer>
+              {budgetOptions.map((budget, index) => (
+                <DestinationCard 
+                  key={index}
+                  isSelected={selectedBudget === budget.name}
+                  onClick={() => handleBudgetClick(budget.name)}
+                >
+                  <DestinationImage bgImage={budget.image}>
+                    <CheckmarkIcon show={selectedBudget === budget.name} />
+                  </DestinationImage>
+                  <DestinationInfo>
+                    <DestinationTitle>{budget.name}</DestinationTitle>
+                    <DestinationSubtitle>{budget.price}</DestinationSubtitle>
+                    <DestinationDescription>{budget.description}</DestinationDescription>
+                  </DestinationInfo>
+                </DestinationCard>
+              ))}
+            </CountriesContainer>
+
+            <NavigationArrows>
+              <ArrowButton onClick={prevSlide}>
+                ‹
+              </ArrowButton>
+              <ArrowButton onClick={nextSlide}>
+                ›
+              </ArrowButton>
+            </NavigationArrows>
+          </>
+        )}
+
+        <ContinueButton 
+          show={showBudget ? selectedBudget !== '' : showDestinations ? selectedDestinations.length > 0 : selectedCountry !== ''}
+          onClick={handleContinue}
+        >
+          Continue
+        </ContinueButton>
+      </HeroSection>
+    </AppContainer>
+  )
+}
+
+export default App
