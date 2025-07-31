@@ -1,5 +1,13 @@
 import React from 'react';
-import styled from 'styled-components';
+import { Card, Col, Badge } from 'react-bootstrap';
+import {
+  MapImage,
+  TripTitle,
+  TripDescription,
+  PriceAmount,
+  PriceUnit,
+  MetaDot
+} from '../styles/TripCardStyles';
 
 interface TripCardProps {
   id: string;
@@ -13,217 +21,6 @@ interface TripCardProps {
   slug: string;
   tags?: string[];
 }
-
-const CardContainer = styled.div`
-  display: flex;
-  width: 100%;
-  max-width: 100%;
-  flex-direction: column;
-  gap: 0.5rem;
-  padding-bottom: 0.5rem;
-  flex-shrink: 0;
-  
-  @media (min-width: 768px) {
-    width: 100%;
-    max-width: 100%;
-  }
-  
-  @media (min-width: 1024px) {
-   width: 100%;
-    max-width: 100%;
-  }
-`;
-
-const MapLinkContainer = styled.a`
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  cursor: pointer;
-  width: 100%;
-  height: 365px;
-  overflow: hidden;
-  border-radius: 0.75rem;
-  transition: all 0.3s ease;
-  background-color: #f5f5f5;
-  
-  @media (min-width: 1024px) {
-    // height: 280px;
-  }
-  
-  &:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-  }
-`;
-
-const MapImageContainer = styled.div`
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 365px;
-`;
-
-const MapImage = styled.img`
-  object-fit: cover;
-  object-position: center;
-  width: 100%;
-  height: 365px;
-  border-radius: 0.75rem;
-  transition: opacity 0.3s ease;
-  opacity: 1;
-`;
-
-const MapBorder = styled.div`
-  position: absolute;
-  inset: 0;
-  border: 1px solid rgba(0, 0, 0, 0.05);
-  border-radius: 0.75rem;
-`;
-
-const ContentLinkContainer = styled.a`
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  text-decoration: none;
-  color: inherit;
-  
-  &:hover {
-    text-decoration: none;
-    color: inherit;
-  }
-`;
-
-const TripTitle = styled.h2`
-  font-size: 1rem;
-  font-weight: 500;
-  color: #171717;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  margin-bottom: 0.25rem;
-  
-  @media (min-width: 1024px) {
-    font-size: 1.25rem;
-  }
-`;
-
-const TripMetaContainer = styled.div`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 0.375rem;
-  color: #171717;
-  font-size: 0.875rem;
-  
-  @media (min-width: 1280px) {
-    font-size: 1rem;
-  }
-`;
-
-const MetaDot = styled.div`
-  height: 3px;
-  width: 3px;
-  background-color: #171717;
-  border-radius: 50%;
-`;
-
-const TripDescription = styled.div`
-  font-size: 0.75rem;
-  color: #525252;
-  margin-top: 0.5rem;
-  line-height: 1.4;
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  
-  @media (min-width: 1280px) {
-    font-size: 0.875rem;
-  }
-`;
-
-const TagsContainer = styled.div`
-  position: relative;
-  display: flex;
-  flex-direction: row;
-  margin-top: 0.5rem;
-  overflow-x: auto;
-  
-  &::-webkit-scrollbar {
-    display: none;
-  }
-  
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-`;
-
-const TagsInner = styled.div`
-  display: flex;
-  flex-direction: row;
-  gap: 0.5rem;
-`;
-
-const Tag = styled.span`
-  background-color: #f3f4f6;
-  color: #374151;
-  font-size: 0.75rem;
-  // padding: 0.25rem 0.5rem;
-  border-radius: 0.375rem;
-  white-space: nowrap;
-  font-weight: 500;
-  
-  &:hover {
-    background-color: #e5e7eb;
-  }
-`;
-
-const Divider = styled.div`
-  height: 1px;
-  background-color: #fafafa;
-  width: 100%;
-  margin: 1rem 0;
-  display: none;
-`;
-
-const PriceContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding-top: 0.5rem;
-`;
-
-const PriceLabel = styled.div`
-  font-size: 0.75rem;
-  line-height: 1;
-  color: #171717;
-  margin-bottom: 0.25rem;
-`;
-
-const PriceRow = styled.div`
-  display: flex;
-  gap: 0.25rem;
-  align-items: flex-end;
-`;
-
-const PriceAmount = styled.div`
-  font-size: 1.125rem;
-  font-weight: 500;
-  color: #171717;
-  
-  @media (min-width: 1280px) {
-    font-size: 1.25rem;
-  }
-`;
-
-const PriceUnit = styled.div`
-  display: flex;
-  flex-direction: row;
-  font-size: 0.875rem;
-  line-height: 1;
-  margin-bottom: 0.375rem;
-  color: #525252;
-`;
 
 const TripCard: React.FC<TripCardProps> = ({
   id,
@@ -253,55 +50,71 @@ const TripCard: React.FC<TripCardProps> = ({
   const displayTags = tags.length > 0 ? tags : defaultTags;
 
   return (
-    <CardContainer>
-      <MapLinkContainer href={tripUrl} target="_blank">
-        <MapImageContainer>
-          <MapImage
-            src={mapImageUrl}
-            alt="Trip Route Map"
-            loading="lazy"
-            onError={(e) => {
-              const target = e.target as HTMLImageElement;
-              target.style.objectFit = 'contain';
-              target.style.backgroundColor = '#f3f4f6';
-            }}
-          />
-        </MapImageContainer>
-        <MapBorder />
-      </MapLinkContainer>
-      
-      <ContentLinkContainer href={tripUrl} target="_blank">
-        <TripTitle>{title}</TripTitle>
+    <Col xs={12} sm={6} md={4} lg={3} className="mb-4">
+      <Card className="h-100 shadow-sm border-0 overflow-hidden">
+        <div className="position-relative">
+          <a href={tripUrl} target="_blank" rel="noopener noreferrer" className="text-decoration-none">
+            <div className="ratio ratio-16x9">
+              <MapImage
+                src={mapImageUrl}
+                alt="Trip Route Map"
+                loading="lazy"
+                className="card-img-top object-fit-cover"
+                onError={(e) => {
+                  const target = e.target as HTMLImageElement;
+                  target.style.objectFit = 'contain';
+                  target.style.backgroundColor = '#f3f4f6';
+                }}
+              />
+            </div>
+            <div className="position-absolute top-0 start-0 w-100 h-100 bg-gradient-to-b from-transparent to-dark opacity-0 hover-opacity-25 transition-opacity"></div>
+          </a>
+        </div>
         
-        <TripMetaContainer>
-          <div>{duration}</div>
-          <MetaDot />
-          <div>{location}</div>
-        </TripMetaContainer>
-        
-        <TripDescription>{description}</TripDescription>
-        
-        <TagsContainer>
-          <TagsInner>
-            {displayTags.slice(0, 7).map((tag, index) => (
-              <Tag key={index}>{tag}</Tag>
-            ))}
-          </TagsInner>
-        </TagsContainer>
-        
-        <Divider />
-        
-        <PriceContainer>
-          <PriceLabel>Starting at</PriceLabel>
-          <PriceRow>
-            <PriceAmount>
-              ${price.toLocaleString()} <span>{currency}</span>
-            </PriceAmount>
-            <PriceUnit>per person</PriceUnit>
-          </PriceRow>
-        </PriceContainer>
-      </ContentLinkContainer>
-    </CardContainer>
+        <Card.Body className="d-flex flex-column">
+          <a href={tripUrl} target="_blank" rel="noopener noreferrer" className="text-decoration-none text-dark">
+            <TripTitle className="card-title h5 mb-2 fw-bold">{title}</TripTitle>
+            
+            <div className="d-flex align-items-center text-muted small mb-3">
+              <span>{duration}</span>
+              <MetaDot className="mx-2" />
+              <span>{location}</span>
+            </div>
+            
+            <TripDescription className="card-text text-muted mb-3 flex-grow-1">
+              {description}
+            </TripDescription>
+            
+            <div className="mb-3">
+              <div className="d-flex flex-wrap gap-1">
+                {displayTags.slice(0, 4).map((tag, index) => (
+                  <Badge key={index} bg="light" text="dark" className="small">
+                    {tag}
+                  </Badge>
+                ))}
+                {displayTags.length > 4 && (
+                  <Badge bg="secondary" className="small">
+                    +{displayTags.length - 4} more
+                  </Badge>
+                )}
+              </div>
+            </div>
+            
+            <hr className="my-3" />
+            
+            <div className="mt-auto">
+              <div className="text-muted small mb-1">Starting at</div>
+              <div className="d-flex justify-content-between align-items-center">
+                <PriceAmount className="h5 mb-0 fw-bold text-primary">
+                  ${price.toLocaleString()} <span className="text-muted small">{currency}</span>
+                </PriceAmount>
+                <PriceUnit className="text-muted small">per person</PriceUnit>
+              </div>
+            </div>
+          </a>
+        </Card.Body>
+      </Card>
+    </Col>
   );
 };
 

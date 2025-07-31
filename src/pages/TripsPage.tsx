@@ -3,6 +3,7 @@ import PageHeader from '../components/PageHeader';
 import styled from 'styled-components';
 import FilterBar from '../components/FilterBar';
 import TripGrid from '../components/TripGrid';
+import Footer from '../components/Footer';
 
 const PageContainer = styled.div`
   min-height: 100vh;
@@ -13,6 +14,8 @@ const ContentContainer = styled.div`
 //   max-width: 1200px;
   margin: 0 auto;
   padding: 2rem;
+  background-color: white;
+
 `;
 
 const FilterSection = styled.div`
@@ -74,94 +77,14 @@ const ShowMapsButton = styled.button`
   }
 `;
 
-const Title = styled.h1`
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: #171717;
-  margin-bottom: 1rem;
-  text-align: center;
-`;
 
-const Subtitle = styled.p`
-  font-size: 1.125rem;
-  color: #525252;
-  text-align: center;
-  margin-bottom: 2rem;
-`;
 
-const SearchSection = styled.div`
-  background: white;
-  border-radius: 1rem;
-  padding: 2rem;
-  margin-bottom: 2rem;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-  border: 1px solid #e5e5e5;
-`;
 
-const SearchContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  
-  @media (min-width: 768px) {
-    flex-direction: row;
-    align-items: center;
-    gap: 1.5rem;
-  }
-`;
 
-const SearchInputWrapper = styled.div`
-  position: relative;
-  flex: 1;
-`;
 
-const SearchInput = styled.input`
-  width: 100%;
-  padding: 0.75rem 1rem 0.75rem 2.5rem;
-  border: 2px solid #e5e5e5;
-  border-radius: 0.5rem;
-  font-size: 1rem;
-  transition: all 0.2s ease;
-  
-  &:focus {
-    outline: none;
-    border-color: #3b82f6;
-    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
-  }
-  
-  &::placeholder {
-    color: #9ca3af;
-  }
-`;
 
-const SearchIcon = styled.div`
-  position: absolute;
-  left: 0.75rem;
-  top: 50%;
-  transform: translateY(-50%);
-  color: #6b7280;
-  font-size: 1.125rem;
-`;
 
-const SearchButton = styled.button`
-  background: #3b82f6;
-  color: white;
-  border: none;
-  border-radius: 0.5rem;
-  padding: 0.75rem 2rem;
-  font-weight: 500;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  
-  &:hover {
-    background: #2563eb;
-    transform: translateY(-1px);
-  }
-  
-  @media (min-width: 768px) {
-    padding: 0.75rem 1.5rem;
-  }
-`;
+
 
 const ResultsInfo = styled.div`
   color: #6b7280;
@@ -298,6 +221,9 @@ const TripsPage: React.FC = () => {
         
         <TripGrid trips={sampleTrips} />
       </ContentContainer>
+
+      {/* Footer */}
+      <Footer />
     </PageContainer>
   );
 };

@@ -1,0 +1,401 @@
+/* Day by Day Section */
+.day-by-day-section {
+  margin-bottom: 2rem;
+}
+
+.day-by-day-title {
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+  color: #1a1a1a;
+}
+
+/* Day Selector */
+.day-selector {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding-bottom: 0.5rem;
+}
+
+.day-selector::-webkit-scrollbar {
+  display: none;
+}
+
+.day-button {
+  border-radius: 9999px;
+  white-space: nowrap;
+  font-size: 0.75rem;
+  padding: 0.25rem 0.75rem;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-width: fit-content;
+}
+
+@media (min-width: 640px) {
+  .day-button {
+    font-size: 0.875rem;
+  }
+}
+
+.day-button-active {
+  background-color: #1a1a1a;
+  color: white;
+}
+
+.day-button-inactive {
+  background-color: white;
+  color: #1a1a1a;
+  border: 1px solid #1a1a1a;
+}
+
+.day-button-inactive:hover {
+  background-color: #f5f5f5;
+}
+
+/* Day Content */
+.day-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding-top: 0.5rem;
+}
+
+.day-header {
+  margin-bottom: 2rem;
+}
+
+.day-title {
+  font-size: 1.25rem;
+  font-weight: 500;
+  padding-top: 0.5rem;
+  margin-bottom: 0.75rem;
+  color: #1a1a1a;
+}
+
+.day-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+  margin: 0;
+}
+
+/* Map Container */
+.map-container {
+  min-height: 300px;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.map-wrapper {
+  width: 100%;
+  height: 100%;
+  min-height: 350px;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  position: relative;
+  background-color: #e5e3df;
+}
+
+.map-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #e5e3df 0%, #d4d2ce 100%);
+}
+
+.map-marker {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+
+.marker-icon {
+  width: 37px;
+  height: 36px;
+  position: relative;
+}
+
+.marker-label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: 'Roboto', Arial, sans-serif;
+  z-index: 11;
+}
+
+/* Map Controls */
+.map-controls {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 20;
+}
+
+.zoom-controls {
+  display: flex;
+  flex-direction: column;
+  background: white;
+  border-radius: 2px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px -1px;
+  margin-bottom: 10px;
+}
+
+.zoom-btn {
+  width: 40px;
+  height: 40px;
+  border: none;
+  background: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  color: #666;
+  transition: color 0.2s ease;
+}
+
+.zoom-btn:hover {
+  color: #333;
+}
+
+.zoom-divider {
+  height: 1px;
+  background-color: #e6e6e6;
+  margin: 0 5px;
+}
+
+.fullscreen-btn {
+  width: 40px;
+  height: 40px;
+  border: none;
+  background: white;
+  border-radius: 2px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px -1px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  right: -50px;
+}
+
+.fullscreen-btn:hover svg {
+  fill: #333;
+}
+
+/* Map Attribution */
+.map-attribution {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 5px;
+  z-index: 20;
+}
+
+.google-logo {
+  margin: 0 5px;
+}
+
+.map-terms {
+  display: flex;
+  gap: 10px;
+  font-size: 10px;
+  color: #000;
+  font-family: 'Roboto', Arial, sans-serif;
+}
+
+.map-terms a {
+  color: #000;
+  text-decoration: none;
+}
+
+.map-terms a:hover {
+  text-decoration: underline;
+}
+
+/* Hotel Card */
+.hotel-card {
+  margin-top: 1.5rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.75rem;
+  overflow: hidden;
+}
+
+.hotel-card-body {
+  padding: 1.5rem;
+}
+
+.hotel-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+@media (min-width: 640px) {
+  .hotel-content {
+    flex-direction: row;
+    align-items: center;
+    gap: 1.5rem;
+  }
+}
+
+.hotel-image-wrapper {
+  position: relative;
+  height: 200px;
+  width: 100%;
+  min-height: 200px;
+  aspect-ratio: 1;
+  background-color: #f3f4f6;
+  border-radius: 0.75rem;
+  overflow: hidden;
+}
+
+@media (min-width: 640px) {
+  .hotel-image-wrapper {
+    height: auto;
+    min-height: 0;
+    max-width: 160px;
+    width: 33.333333%;
+  }
+}
+
+.hotel-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hotel-details {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 0.5rem 0;
+}
+
+@media (min-width: 640px) {
+  .hotel-details {
+    width: 66.666667%;
+  }
+}
+
+.hotel-category {
+  display: none;
+  color: #6b7280;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 0.25rem;
+}
+
+@media (min-width: 640px) {
+  .hotel-category {
+    display: block;
+  }
+}
+
+.hotel-name {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+  color: #1a1a1a;
+}
+
+@media (min-width: 640px) {
+  .hotel-name {
+    font-size: 1.125rem;
+  }
+}
+
+.hotel-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding-top: 0.25rem;
+  color: #6b7280;
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+}
+
+.hotel-meals {
+  color: #6b7280;
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+}
+
+.view-hotel-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: fit-content;
+  font-weight: 500;
+  font-size: 1rem;
+  color: #1a1a1a;
+  text-decoration: underline;
+  padding-top: 0.5rem;
+}
+
+.view-hotel-link:hover {
+  color: #333;
+  text-decoration: underline;
+}
+
+/* Day Note */
+.day-note {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background-color: rgba(245, 245, 245, 0.5);
+  font-size: 0.875rem;
+  color: #1a1a1a;
+}
+
+.note-header {
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+  margin-bottom: 0.5rem;
+}
+
+.note-header svg {
+  width: 0.75rem;
+  height: 0.75rem;
+  margin-bottom: 0.25rem;
+}
+
+.note-title {
+  font-weight: 500;
+  padding-bottom: 0.25rem;
+}
+
+.note-text {
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Meta Dot */
+.meta-dot {
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background-color: #6b7280;
+}

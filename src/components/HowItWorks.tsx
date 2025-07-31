@@ -1,9 +1,9 @@
-import React from 'react';
 
-const HowCloudSafarisWorks = () => {
+
+const HowPipitsafarisWorks = () => {
   return (
     <section className="py-16 flex flex-col max-w-7xl mx-auto px-6 w-full">
-      <h2 className="text-4xl font-bold mb-8">How CloudSafaris works</h2>
+      <h2 className="text-4xl font-bold mb-8">How Pipitsafaris works</h2>
       
       <div className="mx-auto space-y-8">
         {/* Step 1 */}
@@ -80,4 +80,4 @@ const HowCloudSafarisWorks = () => {
   );
 };
 
-export default HowCloudSafarisWorks;
+export default HowPipitsafarisWorks;

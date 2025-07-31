@@ -323,7 +323,7 @@ function App() {
         )}
         
         <Logo>
-          CLOUDSAFARI, INC.
+          PIPITSAFARIS
           <span className="script">Concierge</span>
         </Logo>
         

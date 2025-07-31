@@ -306,7 +306,7 @@ const PageHeader: React.FC = () => {
           <Container>
             <LogoSection>
               <a href="/">
-                <Logo src="https://cloudsafaris.com/combo-logo-neutral-900.png" alt="CloudSafaris" />
+                <Logo src="https://cloudsafaris.com/combo-logo-neutral-900.png" alt="Pipitsafaris" />
               </a>
             </LogoSection>
 
@@ -347,7 +347,7 @@ const PageHeader: React.FC = () => {
         <MobileMenu isOpen={isMobileMenuOpen}>
           <MobileMenuContent>
             <MobileHeader>
-              <MobileLogoWhite src="/combo-logo-white.png" alt="CloudSafaris" />
+              <MobileLogoWhite src="/combo-logo-white.png" alt="Pipitsafaris" />
               <CloseIcon
                 onClick={closeMobileMenu}
                 aria-hidden="true"

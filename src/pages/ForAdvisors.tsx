@@ -3,9 +3,8 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import CallToAction from '../components/CallToAction';
 import ConsultationSection from '../components/ConsultationSection';
-import NewTestimonialsSection from '../components/TestimonialsSection';
 import SimplifiedApproach from '../components/SimplifiedApproach';
-import HowCloudSafarisWorks from '../components/HowItWorks';
+import HowPipitsafarisWorks from '../components/HowItWorks';
 import HeroSection from '../components/HeroSection';
 import {
   PageContainer,
@@ -36,16 +35,14 @@ const ForAdvisors: React.FC = () => {
         </PartnersGrid>
       </PartnersSection>
 
-      {/* How CloudSafaris Works */}
-        <HowCloudSafarisWorks />
+      {/* How Pipitsafaris Works */}
+        <HowPipitsafarisWorks />
     
         {/* Features Section */}
 
       {/* Simplified Approach */}
       <SimplifiedApproach />
 
-      {/* Testimonials */}
-      <NewTestimonialsSection />
 
       {/* Consultation Section */}
       <ConsultationSection />

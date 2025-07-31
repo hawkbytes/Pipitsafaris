@@ -45,6 +45,33 @@ button {
   font-family: inherit;
 }
 
+/* Bootstrap responsive card enhancements */
+.hover-opacity-25:hover {
+  opacity: 0.25 !important;
+}
+
+.transition-opacity {
+  transition: opacity 0.3s ease-in-out;
+}
+
+.bg-gradient-to-b {
+  background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.7));
+}
+
+.object-fit-cover {
+  object-fit: cover;
+}
+
+/* Card hover effects */
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15) !important;
+}
+
 /* Ensure responsive behavior */
 @media (max-width: 768px) {
   html {

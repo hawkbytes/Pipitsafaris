@@ -195,7 +195,7 @@ const Header: React.FC = () => {
       <Container>
         <LogoSection>
           <a href="/">
-            <Logo src="/combo-logo-white.png" alt="CloudSafaris" />
+            <Logo src="/combo-logo-white.png" alt="Pipitsafaris" />
           </a>
         </LogoSection>
 

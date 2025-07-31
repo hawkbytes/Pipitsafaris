@@ -17,7 +17,7 @@ const CallToAction: React.FC = () => {
         <CTAContent>
           <CTATitle>Ready to start selling unforgettable safaris?</CTATitle>
           <CTASubtitle>
-            Sign up your agency today or join the agency you work for if it's already on CloudSafaris.
+            Sign up your agency today or join the agency you work for if it's already on Pipitsafaris.
           </CTASubtitle>
           <CTAButton href="/sign-up">Sign up now</CTAButton>
         </CTAContent>

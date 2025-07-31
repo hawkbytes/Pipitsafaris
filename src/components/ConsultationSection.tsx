@@ -39,13 +39,13 @@ const ConsultationSection: React.FC = () => {
             
             <TextContent>
               <ContentWrapper>
-                <Title>Want to learn more about CloudSafaris?</Title>
+                <Title>Want to learn more about Pipitsafaris?</Title>
                 <Description>
                   One of our pros will work with you 1-on-1 to help you understand the platform.
                 </Description>
               </ContentWrapper>
               
-              <BookButton href="https://calendly.com/markus-cloudsafaris/30min">
+              <BookButton href="https://calendly.com/markus-pipitsafaris/30min">
                 Book meeting
               </BookButton>
             </TextContent>
