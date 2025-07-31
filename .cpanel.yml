@@ -1,0 +1,10 @@
+---
+deployment:
+  tasks:
+    - echo "Installing dependencies..."
+    - npm install
+    - echo "Building React app..."
+    - npm run build
+    - echo "Copying build files to public_html..."
+    - rm -rf ../public_html/*
+    - cp -r build/* ../public_html/
