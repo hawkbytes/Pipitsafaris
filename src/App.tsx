@@ -25,6 +25,38 @@ import {
   ElephantIcon
 } from './styles/AppStyles'
 
+import {
+  ResponsiveContainer,
+  TravelersContainer,
+  RoomCard,
+  RoomTitle,
+  CounterRow,
+  CounterInfo,
+  CounterLabel,
+  CounterSubtext,
+  CounterControls,
+  CounterButton,
+  CounterDisplay,
+  AddRoomButton,
+  DateContainer,
+  DateOptionsContainer,
+  DateOptionButton,
+  CalendarCard,
+  TripTypeContainer,
+  TripTypeSubtitle,
+  TripTypeButtonsContainer,
+  TripTypeButton,
+  ContactContainer,
+  ContactFormCard,
+  FormGrid,
+  FormField,
+  FormLabel,
+  FormInput,
+  FormTextarea,
+  HelperText,
+  HelperButton
+} from './styles/ResponsiveComponents'
+
 interface Room {
   adults: number
   children: number
@@ -368,22 +400,13 @@ function App() {
 
         {showDestinations && !showBudget && !showTravelers && !showDates && !showTripType && !showContactInfo && selectedCountry && (
           <>
-            <div style={{ textAlign: 'center', marginBottom: '20px', color: 'white', opacity: 0.8 }}>
+            <HelperText>
               Not sure what you want to see?
-            </div>
+            </HelperText>
             <div style={{ textAlign: 'center', marginBottom: '40px' }}>
-              <button style={{ 
-                background: 'none', 
-                border: '2px solid white', 
-                color: 'white', 
-                padding: '12px 24px',
-                borderRadius: '4px',
-                cursor: 'pointer',
-                fontSize: '14px',
-                fontWeight: 'bold'
-              }}>
+              <HelperButton>
                 Pick destinations for me
-              </button>
+              </HelperButton>
             </div>
             
             <CountriesContainer>
@@ -437,313 +460,111 @@ function App() {
         )}
 
         {showTravelers && !showDates && !showTripType && !showContactInfo && (
-          <div style={{ 
-            display: 'flex', 
-            flexDirection: 'column', 
-            alignItems: 'center', 
-            gap: '20px',
-            maxWidth: '500px',
-            margin: '0 auto'
-          }}>
+          <TravelersContainer>
             {rooms.map((room, roomIndex) => (
-              <div key={roomIndex} style={{
-                background: 'rgba(0, 0, 0, 0.7)',
-                border: '2px solid rgba(255, 255, 255, 0.3)',
-                borderRadius: '8px',
-                padding: '30px',
-                width: '100%',
-                backdropFilter: 'blur(10px)'
-              }}>
-                <h3 style={{ 
-                  color: 'white', 
-                  marginBottom: '20px', 
-                  fontSize: '18px',
-                  fontWeight: 'bold',
-                  textAlign: 'left'
-                }}>
+              <RoomCard key={roomIndex}>
+                <RoomTitle>
                   ROOM {roomIndex + 1}
-                </h3>
+                </RoomTitle>
                 
                 {/* Adults */}
-                <div style={{ 
-                  display: 'flex', 
-                  justifyContent: 'space-between', 
-                  alignItems: 'center',
-                  marginBottom: '20px'
-                }}>
-                  <div>
-                    <div style={{ color: 'white', fontSize: '16px', fontWeight: 'bold' }}>ADULTS</div>
-                    <div style={{ color: 'rgba(255, 255, 255, 0.7)', fontSize: '14px' }}>Ages 13+</div>
-                  </div>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '15px' }}>
-                    <button
+                <CounterRow>
+                  <CounterInfo>
+                    <CounterLabel>ADULTS</CounterLabel>
+                    <CounterSubtext>Ages 13+</CounterSubtext>
+                  </CounterInfo>
+                  <CounterControls>
+                    <CounterButton
                       onClick={() => updateRoomCount(roomIndex, 'adults', false)}
-                      style={{
-                        background: 'none',
-                        border: '2px solid white',
-                        color: 'white',
-                        width: '35px',
-                        height: '35px',
-                        borderRadius: '4px',
-                        cursor: 'pointer',
-                        fontSize: '18px',
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center'
-                      }}
                     >
                       −
-                    </button>
-                    <span style={{
-                      color: 'white',
-                      fontSize: '18px',
-                      fontWeight: 'bold',
-                      minWidth: '30px',
-                      textAlign: 'center',
-                      background: 'rgba(255, 255, 255, 0.1)',
-                      padding: '8px 12px',
-                      borderRadius: '4px',
-                      border: '2px solid rgba(255, 255, 255, 0.3)'
-                    }}>
+                    </CounterButton>
+                    <CounterDisplay>
                       {room.adults}
-                    </span>
-                    <button
+                    </CounterDisplay>
+                    <CounterButton
                       onClick={() => updateRoomCount(roomIndex, 'adults', true)}
-                      style={{
-                        background: 'none',
-                        border: '2px solid white',
-                        color: 'white',
-                        width: '35px',
-                        height: '35px',
-                        borderRadius: '4px',
-                        cursor: 'pointer',
-                        fontSize: '18px',
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center'
-                      }}
                     >
                       +
-                    </button>
-                  </div>
-                </div>
+                    </CounterButton>
+                  </CounterControls>
+                </CounterRow>
 
                 {/* Children */}
-                <div style={{ 
-                  display: 'flex', 
-                  justifyContent: 'space-between', 
-                  alignItems: 'center',
-                  marginBottom: '20px'
-                }}>
-                  <div>
-                    <div style={{ color: 'white', fontSize: '16px', fontWeight: 'bold' }}>CHILDREN</div>
-                    <div style={{ color: 'rgba(255, 255, 255, 0.7)', fontSize: '14px' }}>Ages 3 - 12</div>
-                  </div>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '15px' }}>
-                    <button
+                <CounterRow>
+                  <CounterInfo>
+                    <CounterLabel>CHILDREN</CounterLabel>
+                    <CounterSubtext>Ages 3 - 12</CounterSubtext>
+                  </CounterInfo>
+                  <CounterControls>
+                    <CounterButton
                       onClick={() => updateRoomCount(roomIndex, 'children', false)}
-                      style={{
-                        background: 'none',
-                        border: '2px solid white',
-                        color: 'white',
-                        width: '35px',
-                        height: '35px',
-                        borderRadius: '4px',
-                        cursor: 'pointer',
-                        fontSize: '18px',
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center'
-                      }}
                     >
                       −
-                    </button>
-                    <span style={{
-                      color: 'white',
-                      fontSize: '18px',
-                      fontWeight: 'bold',
-                      minWidth: '30px',
-                      textAlign: 'center',
-                      background: 'rgba(255, 255, 255, 0.1)',
-                      padding: '8px 12px',
-                      borderRadius: '4px',
-                      border: '2px solid rgba(255, 255, 255, 0.3)'
-                    }}>
+                    </CounterButton>
+                    <CounterDisplay>
                       {room.children}
-                    </span>
-                    <button
+                    </CounterDisplay>
+                    <CounterButton
                       onClick={() => updateRoomCount(roomIndex, 'children', true)}
-                      style={{
-                        background: 'none',
-                        border: '2px solid white',
-                        color: 'white',
-                        width: '35px',
-                        height: '35px',
-                        borderRadius: '4px',
-                        cursor: 'pointer',
-                        fontSize: '18px',
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center'
-                      }}
                     >
                       +
-                    </button>
-                  </div>
-                </div>
+                    </CounterButton>
+                  </CounterControls>
+                </CounterRow>
 
                 {/* Infants */}
-                <div style={{ 
-                  display: 'flex', 
-                  justifyContent: 'space-between', 
-                  alignItems: 'center'
-                }}>
-                  <div>
-                    <div style={{ color: 'white', fontSize: '16px', fontWeight: 'bold' }}>INFANTS</div>
-                    <div style={{ color: 'rgba(255, 255, 255, 0.7)', fontSize: '14px' }}>Ages 0 - 2</div>
-                  </div>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '15px' }}>
-                    <button
+                <CounterRow style={{ marginBottom: 0 }}>
+                  <CounterInfo>
+                    <CounterLabel>INFANTS</CounterLabel>
+                    <CounterSubtext>Ages 0 - 2</CounterSubtext>
+                  </CounterInfo>
+                  <CounterControls>
+                    <CounterButton
                       onClick={() => updateRoomCount(roomIndex, 'infants', false)}
-                      style={{
-                        background: 'none',
-                        border: '2px solid white',
-                        color: 'white',
-                        width: '35px',
-                        height: '35px',
-                        borderRadius: '4px',
-                        cursor: 'pointer',
-                        fontSize: '18px',
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center'
-                      }}
                     >
                       −
-                    </button>
-                    <span style={{
-                      color: 'white',
-                      fontSize: '18px',
-                      fontWeight: 'bold',
-                      minWidth: '30px',
-                      textAlign: 'center',
-                      background: 'rgba(255, 255, 255, 0.1)',
-                      padding: '8px 12px',
-                      borderRadius: '4px',
-                      border: '2px solid rgba(255, 255, 255, 0.3)'
-                    }}>
+                    </CounterButton>
+                    <CounterDisplay>
                       {room.infants}
-                    </span>
-                    <button
+                    </CounterDisplay>
+                    <CounterButton
                       onClick={() => updateRoomCount(roomIndex, 'infants', true)}
-                      style={{
-                        background: 'none',
-                        border: '2px solid white',
-                        color: 'white',
-                        width: '35px',
-                        height: '35px',
-                        borderRadius: '4px',
-                        cursor: 'pointer',
-                        fontSize: '18px',
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center'
-                      }}
                     >
                       +
-                    </button>
-                  </div>
-                </div>
-              </div>
+                    </CounterButton>
+                  </CounterControls>
+                </CounterRow>
+              </RoomCard>
             ))}
             
-            <button
-              onClick={addRoom}
-              style={{
-                background: 'none',
-                border: '2px solid white',
-                color: 'white',
-                padding: '15px 30px',
-                fontSize: '16px',
-                fontWeight: 'bold',
-                borderRadius: '4px',
-                cursor: 'pointer',
-                marginTop: '10px',
-                textTransform: 'uppercase',
-                letterSpacing: '1px'
-              }}
-            >
+            <AddRoomButton onClick={addRoom}>
               ADD ROOM +
-            </button>
-          </div>
+            </AddRoomButton>
+          </TravelersContainer>
         )}
 
         {showDates && !showTripType && !showContactInfo && (
-          <div style={{ 
-            display: 'flex', 
-            flexDirection: 'column', 
-            alignItems: 'center', 
-            gap: '30px',
-            maxWidth: '600px',
-            margin: '0 auto'
-          }}>
+          <DateContainer>
             {/* Date Option Buttons */}
-            <div style={{ 
-              display: 'flex', 
-              gap: '20px',
-              flexWrap: 'wrap',
-              justifyContent: 'center'
-            }}>
-              <button
+            <DateOptionsContainer>
+              <DateOptionButton
+                isSelected={dateOption === 'specific_date'}
                 onClick={() => setDateOption('specific_date')}
-                style={{
-                  background: dateOption === 'specific_date' ? 'rgba(255, 255, 255, 0.2)' : 'none',
-                  border: '2px solid white',
-                  color: 'white',
-                  padding: '20px 30px',
-                  fontSize: '16px',
-                  fontWeight: 'bold',
-                  borderRadius: '4px',
-                  cursor: 'pointer',
-                  textTransform: 'uppercase',
-                  letterSpacing: '1px',
-                  minWidth: '250px',
-                  textAlign: 'center'
-                }}
               >
                 I HAVE A SPECIFIC DATE
-              </button>
-              <button
+              </DateOptionButton>
+              <DateOptionButton
+                isSelected={dateOption === 'preferred_month'}
                 onClick={() => setDateOption('preferred_month')}
-                style={{
-                  background: dateOption === 'preferred_month' ? 'rgba(255, 255, 255, 0.2)' : 'none',
-                  border: '2px solid white',
-                  color: 'white',
-                  padding: '20px 30px',
-                  fontSize: '16px',
-                  fontWeight: 'bold',
-                  borderRadius: '4px',
-                  cursor: 'pointer',
-                  textTransform: 'uppercase',
-                  letterSpacing: '1px',
-                  minWidth: '250px',
-                  textAlign: 'center'
-                }}
               >
                 I HAVE A PREFERRED MONTH TO TRAVEL
-              </button>
-            </div>
+              </DateOptionButton>
+            </DateOptionsContainer>
 
             {/* Calendar */}
             {dateOption === 'specific_date' && (
-              <div style={{
-                background: 'rgba(0, 0, 0, 0.7)',
-                border: '2px solid rgba(255, 255, 255, 0.3)',
-                borderRadius: '8px',
-                padding: '20px',
-                backdropFilter: 'blur(10px)',
-                minWidth: '300px'
-              }}>
+              <CalendarCard>
                 <div style={{
                   color: 'white',
                   fontSize: '18px',
@@ -785,7 +606,7 @@ function App() {
                     </button>
                   ))}
                 </div>
-              </div>
+              </CalendarCard>
             )}
 
             {dateOption === 'preferred_month' && (
@@ -801,75 +622,32 @@ function App() {
                 Great! We'll work with you to find the perfect time within your preferred month.
               </div>
             )}
-          </div>
+          </DateContainer>
         )}
 
         {showTripType && !showContactInfo && (
-          <div style={{ 
-            display: 'flex', 
-            flexDirection: 'column', 
-            alignItems: 'center', 
-            gap: '30px',
-            maxWidth: '600px',
-            margin: '0 auto'
-          }}>
+          <TripTypeContainer>
             {/* Subtitle */}
-            <div style={{
-              color: 'rgba(255, 255, 255, 0.8)',
-              fontSize: '16px',
-              textAlign: 'center',
-              marginBottom: '20px'
-            }}>
+            <TripTypeSubtitle>
               For groups of fewer than 3, joining others can make your safari more affordable.
-            </div>
+            </TripTypeSubtitle>
 
             {/* Trip Type Option Buttons */}
-            <div style={{ 
-              display: 'flex', 
-              gap: '20px',
-              flexWrap: 'wrap',
-              justifyContent: 'center'
-            }}>
-              <button
+            <TripTypeButtonsContainer>
+              <TripTypeButton
+                isSelected={selectedTripType === 'GROUP TRIP'}
                 onClick={() => setSelectedTripType('GROUP TRIP')}
-                style={{
-                  background: selectedTripType === 'GROUP TRIP' ? 'rgba(255, 255, 255, 0.2)' : 'none',
-                  border: '2px solid white',
-                  color: 'white',
-                  padding: '20px 40px',
-                  fontSize: '18px',
-                  fontWeight: 'bold',
-                  borderRadius: '4px',
-                  cursor: 'pointer',
-                  textTransform: 'uppercase',
-                  letterSpacing: '1px',
-                  minWidth: '200px',
-                  textAlign: 'center'
-                }}
               >
                 GROUP TRIP
-              </button>
-              <button
+              </TripTypeButton>
+              <TripTypeButton
+                isSelected={selectedTripType === 'PRIVATE SAFARI'}
                 onClick={() => setSelectedTripType('PRIVATE SAFARI')}
-                style={{
-                  background: selectedTripType === 'PRIVATE SAFARI' ? 'rgba(255, 255, 255, 0.2)' : 'none',
-                  border: '2px solid white',
-                  color: 'white',
-                  padding: '20px 40px',
-                  fontSize: '18px',
-                  fontWeight: 'bold',
-                  borderRadius: '4px',
-                  cursor: 'pointer',
-                  textTransform: 'uppercase',
-                  letterSpacing: '1px',
-                  minWidth: '200px',
-                  textAlign: 'center'
-                }}
               >
                 PRIVATE SAFARI
-              </button>
-            </div>
-          </div>
+              </TripTypeButton>
+            </TripTypeButtonsContainer>
+          </TripTypeContainer>
         )}
 
         {showContactInfo && (
