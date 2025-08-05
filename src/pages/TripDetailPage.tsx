@@ -213,6 +213,13 @@ const TripDetailPage: React.FC = () => {
               </Card.Body>
             </Card>
 
+
+
+     {/* Day by Day Section */}
+            <div style={{ marginTop: '3rem' }}>
+              <DayByDay itineraryDays={itineraryDays} />
+            </div>
+
             {/* Itinerary Section */}
             <ItinerarySection 
               travellers={2}
@@ -221,10 +228,7 @@ const TripDetailPage: React.FC = () => {
               days={itineraryDays}
             />
 
-            {/* Day by Day Section */}
-            <div style={{ marginTop: '3rem' }}>
-              <DayByDay itineraryDays={itineraryDays} />
-            </div>
+       
 
             {/* What to Know Section */}
             <div style={{ marginTop: '3rem' }}>
