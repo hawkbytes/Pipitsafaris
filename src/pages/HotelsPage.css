@@ -29,6 +29,12 @@
   padding: 2rem;
 }
 
+.map-content {
+  position: sticky;
+  top: 2rem;
+  height: fit-content;
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .page-title {
@@ -41,5 +47,11 @@
   
   .hotels-content {
     padding: 1.5rem;
+  }
+  
+  .map-content {
+    position: relative;
+    top: auto;
+    margin-top: 2rem;
   }
 }

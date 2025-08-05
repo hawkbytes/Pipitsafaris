@@ -1,12 +1,60 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import PageHeader from '../components/PageHeader';
 import Footer from '../components/Footer';
 import HotelFilterHeader from '../components/HotelFilterHeader';
 import HotelCards from '../components/HotelCards';
+import InteractiveHotelMap from '../components/InteractiveHotelMap';
 import './HotelsPage.css';
 
 const HotelsPage: React.FC = () => {
+  const [focusedHotel, setFocusedHotel] = useState<{ lat: number; lng: number } | undefined>();
+
+  // Hotel data (matching the HotelCards component)
+  const hotels = [
+    {
+      id: 'p511',
+      slug: 'tarangire-elephant-springs',
+      name: 'Tarangire Elephant Springs',
+      type: 'Lodge',
+      category: 'Luxury',
+      coordinates: { lat: -3.6509, lng: 36.0228 }
+    },
+    {
+      id: 'p512',
+      slug: 'sandies-baobab-beach-zanzibar',
+      name: 'Sandies Baobab Beach Zanzibar',
+      type: 'Resort',
+      category: 'Luxury',
+      coordinates: { lat: -6.1659, lng: 39.2026 }
+    },
+    {
+      id: 'p513',
+      slug: 'ameg-lodge',
+      name: 'Ameg Lodge',
+      type: 'Lodge',
+      category: 'Value',
+      coordinates: { lat: -2.3333, lng: 34.8333 }
+    },
+    {
+      id: 'p514',
+      slug: 'lake-naivasha-simba-lodge',
+      name: 'Lake Naivasha Simba Lodge',
+      type: 'Lodge',
+      category: 'Comfort',
+      coordinates: { lat: -0.7667, lng: 36.3667 }
+    }
+  ];
+
+  const handleMapFocus = (coordinates: { lat: number; lng: number }) => {
+    setFocusedHotel(coordinates);
+  };
+
+  const handleMarkerClick = (hotel: any) => {
+    // You can add additional functionality here, like opening hotel details
+    console.log('Hotel marker clicked:', hotel.name);
+  };
+
   return (
     <>
       <PageHeader />
@@ -25,11 +73,20 @@ const HotelsPage: React.FC = () => {
             </Col>
           </Row>
 
-          {/* Main Content Area */}
+          {/* Main Content Area - Cards and Map Side by Side */}
           <Row className="mb-5">
-            <Col>
+            <Col lg={7} className="mb-4 mb-lg-0">
               <div className="hotels-content">
-                <HotelCards />
+                <HotelCards onMapFocus={handleMapFocus} />
+              </div>
+            </Col>
+            <Col lg={5}>
+              <div className="map-content">
+                <InteractiveHotelMap 
+                  hotels={hotels}
+                  focusedHotel={focusedHotel}
+                  onMarkerClick={handleMarkerClick}
+                />
               </div>
             </Col>
           </Row>

@@ -15,6 +15,9 @@ const HotelCard = styled.div`
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   background: white;
+  min-height: 380px;
+  display: flex;
+  flex-direction: column;
   
   &:hover {
     transform: translateY(-4px);
@@ -36,9 +39,10 @@ const HotelLink = styled.a`
 
 const HotelImageContainer = styled.div`
   position: relative;
-  height: 200px;
+  height: 280px;
   overflow: hidden;
   cursor: pointer;
+  border-radius: 0.75rem;
 `;
 
 const HotelImage = styled.img`
@@ -138,7 +142,11 @@ const Dot = styled.div<{ active: boolean }>`
 `;
 
 const HotelInfo = styled.div`
-  padding: 1.25rem;
+  padding: 1.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 `;
 
 const HotelName = styled.h3`
