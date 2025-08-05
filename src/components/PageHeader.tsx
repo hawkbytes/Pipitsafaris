@@ -163,7 +163,9 @@ const SignInButton = styled.button`
   }
 `;
 
-const MobileMenuOverlay = styled.div<{ isOpen: boolean }>`
+const MobileMenuOverlay = styled.div.withConfig({
+  shouldForwardProp: (prop) => prop !== 'isOpen',
+})<{ isOpen: boolean }>`
   display: ${props => props.isOpen ? 'block' : 'none'};
   position: fixed;
   top: 0;
@@ -178,7 +180,9 @@ const MobileMenuOverlay = styled.div<{ isOpen: boolean }>`
   }
 `;
 
-const MobileMenu = styled.div<{ isOpen: boolean }>`
+const MobileMenu = styled.div.withConfig({
+  shouldForwardProp: (prop) => prop !== 'isOpen',
+})<{ isOpen: boolean }>`
   display: ${props => props.isOpen ? 'block' : 'none'};
   position: fixed;
   top: 0;

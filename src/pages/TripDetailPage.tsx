@@ -3,6 +3,7 @@ import { Container, Row, Col, Card, Button } from 'react-bootstrap';
 import ItinerarySection from '../components/ItinerarySection';
 import WhatToKnowSection from '../components/WhatToKnowSection';
 import TestimonialsSection from '../components/TestimonialsSection';
+import DayByDay from '../components/DayByDay';
 import './TripDetailPage.css';
 import PageHeader from '../components/PageHeader';
 import Footer from '../components/Footer';
@@ -123,28 +124,63 @@ const TripDetailPage: React.FC = () => {
         {/* Image Gallery */}
         <Row className="mb-5">
           <Col>
-            <div className="image-gallery">
-              <div className="gallery-button">
-                <Button variant="outline-light" className="view-gallery-btn">
-                  <span className="d-block d-sm-none">Gallery</span>
-                  <span className="d-none d-sm-block">View gallery</span>
-                  <i className="fas fa-images ms-2"></i>
-                </Button>
-              </div>
-              <div className="gallery-grid">
-                <div className="main-image">
-                  <img src={tripData.images[0]} alt={tripData.title} className="gallery-img main" />
+            <div className="image-gallery relative">
+              <div className="d-flex gap-2 h-96">
+                {/* Left side image */}
+                <div className="hidden sm:flex w-1/4 h-full">
+                  <img 
+                    src={tripData.images[3]} 
+                    alt={tripData.title} 
+                    className="block object-cover w-full h-full rounded-l-sm rounded-r-xl md:rounded-sm hover:cursor-pointer" 
+                  />
                 </div>
-                <div className="secondary-images d-none d-sm-flex">
-                  <div className="secondary-top">
-                    <img src={tripData.images[1]} alt={tripData.title} className="gallery-img secondary" />
+                {/* Middle section with two stacked images */}
+                <div className="hidden sm:flex flex-col w-1/2 lg:w-1/3 h-full">
+                  <div className="w-full h-1/2">
+                    <img 
+                      src={tripData.images[0]} 
+                      alt={tripData.title} 
+                      className="block object-cover w-full h-full rounded-l-sm rounded-r-xl md:rounded-sm hover:cursor-pointer" 
+                    />
                   </div>
-                  <div className="secondary-bottom d-none d-sm-flex">
-                    <img src={tripData.images[2]} alt={tripData.title} className="gallery-img secondary" />
+                  <div className="hidden sm:flex w-full pt-2 h-1/2">
+                    <img 
+                      src={tripData.images[1]} 
+                      alt={tripData.title} 
+                      className="object-cover w-full h-full rounded-l-sm rounded-r-xl md:rounded-sm hover:cursor-pointer" 
+                    />
                   </div>
                 </div>
-                <div className="tertiary-image d-none d-md-block">
-                  <img src={tripData.images[3]} alt={tripData.title} className="gallery-img tertiary" />
+                {/* Right side image */}
+                <div className="hidden sm:flex w-1/4 h-full relative">
+                  <img 
+                    src={tripData.images[2]} 
+                    alt={tripData.title} 
+                    className="object-cover w-full h-full rounded-l-sm rounded-r-xl md:rounded-sm hover:cursor-pointer" 
+                  />
+                  {/* View gallery button positioned in bottom-right */}
+                  <div className="absolute bottom-4 right-4">
+                    <Button variant="outline-light" className="view-gallery-btn bg-black bg-opacity-50 text-white border-white hover:bg-opacity-70">
+                      <span className="d-block d-sm-none">Gallery</span>
+                      <span className="d-none d-sm-block">View gallery</span>
+                      <i className="fas fa-images ms-2"></i>
+                    </Button>
+                  </div>
+                </div>
+                {/* Mobile view - show only first image */}
+                <div className="flex sm:hidden w-full h-full relative">
+                  <img 
+                    src={tripData.images[0]} 
+                    alt={tripData.title} 
+                    className="block object-cover w-full h-full rounded-l-sm rounded-r-xl md:rounded-sm hover:cursor-pointer" 
+                  />
+                  {/* Mobile view gallery button */}
+                  <div className="absolute bottom-4 right-4">
+                    <Button variant="outline-light" size="sm" className="view-gallery-btn bg-black bg-opacity-50 text-white border-white hover:bg-opacity-70 px-2 py-1">
+                      <span className="d-block">Gallery</span>
+                      <i className="fas fa-images ms-2"></i>
+                    </Button>
+                  </div>
                 </div>
               </div>
             </div>
@@ -184,6 +220,11 @@ const TripDetailPage: React.FC = () => {
               endDate="2025-08-15"
               days={itineraryDays}
             />
+
+            {/* Day by Day Section */}
+            <div style={{ marginTop: '3rem' }}>
+              <DayByDay itineraryDays={itineraryDays} />
+            </div>
 
             {/* What to Know Section */}
             <div style={{ marginTop: '3rem' }}>
