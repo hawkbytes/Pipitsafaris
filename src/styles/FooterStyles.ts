@@ -170,8 +170,8 @@ export const SocialIcon = styled.a`
   transform: translateY(0) scale(1);
   
   svg {
-    width: 20px;
-    height: 20px;
+    width: 18px;
+    height: 18px;
     transition: all 0.3s ease;
   }
   

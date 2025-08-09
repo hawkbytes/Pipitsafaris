@@ -4,7 +4,7 @@ import PageHeader from '../components/PageHeader';
 import Footer from '../components/Footer';
 import HotelFilterHeader from '../components/HotelFilterHeader';
 import HotelCards from '../components/HotelCards';
-import InteractiveHotelMap from '../components/InteractiveHotelMap';
+import HotelMap from '../components/HotelMap';
 import './HotelsPage.css';
 
 const HotelsPage: React.FC = () => {
@@ -82,7 +82,7 @@ const HotelsPage: React.FC = () => {
             </Col>
             <Col lg={5}>
               <div className="map-content">
-                <InteractiveHotelMap 
+                <HotelMap 
                   hotels={hotels}
                   focusedHotel={focusedHotel}
                   onMarkerClick={handleMarkerClick}

@@ -198,9 +198,9 @@ const HotelFilterHeader: React.FC<HotelFilterHeaderProps> = ({ onFilterChange })
 
   const priceCategories = [
     { id: 'value', label: 'Value', dollarSigns: 1 },
-    { id: 'comfort', label: 'Comfort', dollarSigns: 2 },
-    { id: 'luxury', label: 'Luxury', dollarSigns: 3 },
-    { id: 'exclusive', label: 'Exclusive', dollarSigns: 4 }
+    { id: 'comfort', label: 'Comfort', dollarSigns: 1 },
+    { id: 'luxury', label: 'Luxury', dollarSigns: 1 },
+    { id: 'exclusive', label: 'Exclusive', dollarSigns: 1 }
   ];
 
   const handleTypeClick = (typeId: string) => {
@@ -235,7 +235,7 @@ const HotelFilterHeader: React.FC<HotelFilterHeaderProps> = ({ onFilterChange })
                     role="img"
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 576 512"
-                    style={{ width: '100%', height: '100%' }}
+                    style={{ width: '200%', height: '200%' }}
                   >
                     <path fill="currentColor" d={type.icon} />
                   </svg>
@@ -265,7 +265,7 @@ const HotelFilterHeader: React.FC<HotelFilterHeaderProps> = ({ onFilterChange })
                       role="img"
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 320 512"
-                      style={{ width: '100%', height: '100%' }}
+                      style={{ width: '200%', height: '200%' }}
                     >
                       <path fill="currentColor" d={dollarSignIcon} />
                     </svg>

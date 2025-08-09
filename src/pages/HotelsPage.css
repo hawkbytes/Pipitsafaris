@@ -1,57 +1,13 @@
-/* Hotels Page Styles */
-.hotels-page {
-  min-height: 100vh;
-  background-color: #fafafa;
+
+
+/* Override any Bootstrap or framework headers */
+.container .row:first-child,
+.container-fluid .row:first-child {
+  margin-top: 0 !important;
 }
 
-.page-header {
-  padding: 2rem 0;
-}
-
-.page-title {
-  font-size: 2.5rem;
-  font-weight: 600;
-  color: #1a1a1a;
-  margin-bottom: 1rem;
-}
-
-.page-subtitle {
-  font-size: 1.125rem;
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-.hotels-content {
-  min-height: 400px;
-  background-color: white;
-  border-radius: 0.5rem;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-  padding: 2rem;
-}
-
-.map-content {
-  position: sticky;
-  top: 2rem;
-  height: fit-content;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .page-title {
-    font-size: 2rem;
-  }
-  
-  .page-subtitle {
-    font-size: 1rem;
-  }
-  
-  .hotels-content {
-    padding: 1.5rem;
-  }
-  
-  .map-content {
-    position: relative;
-    top: auto;
-    margin-top: 2rem;
-  }
+/* Hide text-center divs that might contain headers */
+.text-center:has(h1),
+div.text-center:has(h1) {
+  display: none !important;
 }

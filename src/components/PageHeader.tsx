@@ -310,7 +310,7 @@ const PageHeader: React.FC = () => {
           <Container>
             <LogoSection>
               <a href="/">
-                <Logo src="https://cloudsafaris.com/combo-logo-neutral-900.png" alt="Pipitsafaris" />
+                <Logo src="Pipitsafaris" alt="Pipitsafaris" />
               </a>
             </LogoSection>
 
