@@ -113,6 +113,7 @@ const FindTripButton = styled.a`
   &:hover {
     background-color: rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(4px);
+    color:'#fff';
   }
 `;
 
@@ -194,7 +195,13 @@ const Header: React.FC = () => {
     <HeaderContainer>
       <Container>
         <LogoSection>
-          <a href="/" style={{ color: 'white', textDecoration: 'none', fontSize: '1.5rem', fontWeight: 'bold' }}>
+          <a href="/" style={{ 
+            color: 'white', 
+            textDecoration: 'none', 
+            fontSize: '1.5rem', 
+            fontWeight: 'bold',
+            fontFamily: 'sans-serif'
+          }}>
             Pipitsafaris
           </a>
         </LogoSection>

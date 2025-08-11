@@ -1,0 +1,13 @@
+
+
+/* Override any Bootstrap or framework headers */
+.container .row:first-child,
+.container-fluid .row:first-child {
+  margin-top: 0 !important;
+}
+
+/* Hide text-center divs that might contain headers */
+.text-center:has(h1),
+div.text-center:has(h1) {
+  display: none !important;
+}

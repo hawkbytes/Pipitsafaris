@@ -286,11 +286,13 @@ const InclusionItem = styled.div`
   align-items: flex-start;
   gap: 0.75rem;
 
-  i {
+  svg {
     font-size: 0.875rem;
     margin-top: 0.125rem;
     flex-shrink: 0;
-  }
+    width:'12px';
+    height: '13px';
+    }
 
   span {
     font-size: 1rem;
@@ -556,31 +558,31 @@ const ItinerarySection: React.FC<ItinerarySectionProps> = ({
             <InclusionBlock>
               <InclusionHeader>
                 <h4>What's included</h4>
-                <i className="fas fa-plus"></i>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon" className="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15"></path></svg>
               </InclusionHeader>
               <InclusionList>
                 <InclusionItem>
-                  <i className="fas fa-check text-success"></i>
-                  <span>Transportation from Moshi to the starting point on the mountain and return to Moshi.</span>
+                 <svg style={{width:'12px', height:'13px'}} aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check" className="svg-inline--fa fa-check text-safari-green text-sm " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"></path></svg>
+                  <span> Transportation from Moshi to the starting point on the mountain and return to Moshi.</span>
                 </InclusionItem>
                 <InclusionItem>
-                  <i className="fas fa-check text-success"></i>
+                 <svg style={{ width: '12px', height: '13px' }} aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check" className="svg-inline--fa fa-check text-safari-green text-sm " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"></path></svg>
                   <span>National park gate fees, hut/camping fees.</span>
                 </InclusionItem>
                 <InclusionItem>
-                  <i className="fas fa-check text-success"></i>
+                 <svg style={{ width: '12px', height: '13px' }} aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check" className="svg-inline--fa fa-check text-safari-green text-sm " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"></path></svg>
                   <span>Rescue fees, tents and sleeping mattress.</span>
                 </InclusionItem>
                 <InclusionItem>
-                  <i className="fas fa-check text-success"></i>
+                  <svg style={{ width: '12px', height: '13px' }} aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check" className="svg-inline--fa fa-check text-safari-green text-sm " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"></path></svg>
                   <span>Guides salaries, porters salaries & all meals on the mountain.</span>
                 </InclusionItem>
                 <InclusionItem>
-                  <i className="fas fa-check text-success"></i>
+                 <svg style={{ width: '12px', height: '13px' }} aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check" className="svg-inline--fa fa-check text-safari-green text-sm " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"></path></svg>
                   <span>Guides, porters, cook accommodation and entry fees on the mountain.</span>
                 </InclusionItem>
                 <InclusionItem>
-                  <i className="fas fa-check text-success"></i>
+                 <svg style={{ width: '12px', height: '13px' }} aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check" className="svg-inline--fa fa-check text-safari-green text-sm " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"></path></svg>
                   <span>Qualified guides for all the routes.</span>
                 </InclusionItem>
               </InclusionList>
@@ -590,11 +592,11 @@ const ItinerarySection: React.FC<ItinerarySectionProps> = ({
             <InclusionBlock>
               <InclusionHeader>
                 <h4>What's excluded</h4>
-                <i className="fas fa-minus"></i>
+               <svg style={{ width: '12px', height: '13px' }} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon" className="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14"></path></svg>
               </InclusionHeader>
               <InclusionList>
                 <InclusionItem>
-                  <i className="fas fa-times text-danger"></i>
+                <svg style={{ width: '12px', height: '13px' }} aria-hidden="true" focusable="false" data-prefix="fas" data-icon="x" className="svg-inline--fa fa-x text-red-600 text-sm " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="currentColor" d="M376.6 84.5c11.3-13.6 9.5-33.8-4.1-45.1s-33.8-9.5-45.1 4.1L192 206 56.6 43.5C45.3 29.9 25.1 28.1 11.5 39.4S-3.9 70.9 7.4 84.5L150.3 256 7.4 427.5c-11.3 13.6-9.5 33.8 4.1 45.1s33.8 9.5 45.1-4.1L192 306 327.4 468.5c11.3 13.6 31.5 15.4 45.1 4.1s15.4-31.5 4.1-45.1L233.7 256 376.6 84.5z"></path></svg>
                   <span>Guides, Porters, Cook Tips, Gears eg. Sleeping Bags, Clothes and Shoes.</span>
                 </InclusionItem>
               </InclusionList>

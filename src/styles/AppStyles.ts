@@ -32,7 +32,8 @@ export const AppContainer = styled.div`
 
 // Hero Section with Giraffe Background
 export const HeroSection = styled.section`
-  height: 100vh;
+  min-height: 100vh;
+  height: auto;
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)),
               url('https://images.unsplash.com/photo-1516426122078-c23e76319801?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80');
   background-size: cover;
@@ -45,6 +46,18 @@ export const HeroSection = styled.section`
   text-align: center;
   color: white;
   position: relative;
+  padding: 2rem 1rem;
+  
+  @media (max-width: 768px) {
+    background-attachment: scroll;
+    padding: 1.5rem 0.75rem;
+    min-height: 100vh;
+  }
+  
+  @media (max-width: 480px) {
+    padding: 1rem 0.5rem;
+    min-height: 100vh;
+  }
 `;
 
 export const Logo = styled.div`
@@ -61,6 +74,34 @@ export const Logo = styled.div`
     text-transform: none;
     margin-left: 1rem;
   }
+  
+  @media (max-width: 768px) {
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    
+    .script {
+      font-size: 2.2rem;
+      margin-left: 0.5rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 2rem;
+    letter-spacing: 1px;
+    
+    .script {
+      font-size: 1.8rem;
+      margin-left: 0.25rem;
+    }
+  }
+  
+  @media (max-width: 320px) {
+    font-size: 1.75rem;
+    
+    .script {
+      font-size: 1.5rem;
+    }
+  }
 `;
 
 export const Tagline = styled.p`
@@ -69,6 +110,18 @@ export const Tagline = styled.p`
   text-transform: uppercase;
   margin: 1rem 0 3rem;
   font-weight: 300;
+  
+  @media (max-width: 768px) {
+    font-size: 1rem;
+    letter-spacing: 1.5px;
+    margin: 0.75rem 0 2rem;
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    margin: 0.5rem 0 1.5rem;
+  }
 `;
 
 export const MainQuestion = styled.h2`
@@ -78,21 +131,66 @@ export const MainQuestion = styled.h2`
   text-transform: uppercase;
   margin-bottom: 3rem;
   opacity: 0.9;
+  max-width: 90%;
+  
+  @media (max-width: 768px) {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    max-width: 95%;
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.5px;
+    line-height: 1.3;
+  }
+  
+  @media (max-width: 320px) {
+    font-size: 0.9rem;
+  }
 `;
 
 // Country Cards Container
 export const CountriesContainer = styled.div`
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1.5rem;
   justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
+  align-items: start;
   max-width: 1200px;
+  width: 100%;
   padding: 0 2rem;
+  margin-bottom: 2rem;
+  
+  @media (max-width: 1024px) {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.25rem;
+    padding: 0 1.5rem;
+  }
+  
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    padding: 0 1rem;
+    max-width: 100%;
+  }
+  
+  @media (max-width: 480px) {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 0 0.5rem;
+    max-width: 350px;
+  }
+  
+  @media (max-width: 320px) {
+    max-width: 280px;
+  }
 `;
 
 export const CountryCard = styled.div<{ isSelected?: boolean }>`
-  width: 200px;
+  width: 100%;
+  max-width: 250px;
   height: 280px;
   border-radius: 15px;
   overflow: hidden;
@@ -101,10 +199,29 @@ export const CountryCard = styled.div<{ isSelected?: boolean }>`
   transition: all 0.3s ease;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
   border: ${props => props.isSelected ? '3px solid #fff' : 'none'};
+  margin: 0 auto;
   
   &:hover {
     transform: translateY(-10px) scale(1.05);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+  }
+  
+  @media (max-width: 768px) {
+    height: 250px;
+    max-width: 220px;
+    
+    &:hover {
+      transform: translateY(-5px) scale(1.02);
+    }
+  }
+  
+  @media (max-width: 480px) {
+    height: 220px;
+    max-width: 100%;
+    
+    &:hover {
+      transform: translateY(-3px);
+    }
   }
 `;
 
@@ -120,6 +237,14 @@ export const CardBackground = styled.div<{ bgImage: string }>`
   justify-content: flex-end;
   padding: 1.5rem;
   position: relative;
+  
+  @media (max-width: 768px) {
+    padding: 1.25rem;
+  }
+  
+  @media (max-width: 480px) {
+    padding: 1rem;
+  }
 `;
 
 export const CheckmarkIcon = styled.div<{ show: boolean }>`
@@ -152,6 +277,16 @@ export const CountryName = styled.h3`
   letter-spacing: 1px;
   text-transform: uppercase;
   margin: 0 0 0.5rem 0;
+  text-align: center;
+  
+  @media (max-width: 768px) {
+    font-size: 1.2rem;
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+  }
 `;
 
 export const CountryDescription = styled.p`
@@ -160,6 +295,16 @@ export const CountryDescription = styled.p`
   line-height: 1.4;
   margin: 0;
   font-weight: 300;
+  text-align: center;
+  
+  @media (max-width: 768px) {
+    font-size: 0.85rem;
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 0.8rem;
+    line-height: 1.3;
+  }
 `;
 
 // Continue Button
@@ -193,6 +338,26 @@ export const ContinueButton = styled.button<{ show: boolean }>`
   
   &:hover::after {
     transform: translateX(5px);
+  }
+  
+  @media (max-width: 768px) {
+    margin-top: 2rem;
+    padding: 0.875rem 2rem;
+    font-size: 0.9rem;
+  }
+  
+  @media (max-width: 480px) {
+    margin-top: 1.5rem;
+    padding: 0.75rem 1.5rem;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+    width: auto;
+    min-width: 140px;
+  }
+  
+  @media (max-width: 320px) {
+    padding: 0.6rem 1.25rem;
+    font-size: 0.8rem;
   }
 `;
 
@@ -244,16 +409,31 @@ export const BackButton = styled.button`
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  z-index: 10;
   
   &:hover {
     opacity: 0.7;
     transform: translateX(-5px);
   }
+  
+  @media (max-width: 768px) {
+    top: 1.5rem;
+    left: 1.5rem;
+    font-size: 0.9rem;
+  }
+  
+  @media (max-width: 480px) {
+    top: 1rem;
+    left: 1rem;
+    font-size: 0.8rem;
+    gap: 0.25rem;
+  }
 `;
 
 // Destination Cards
 export const DestinationCard = styled.div<{ isSelected?: boolean }>`
-  width: 260px;
+  width: 100%;
+  max-width: 280px;
   background: rgba(255, 255, 255, 0.95);
   border-radius: 12px;
   overflow: hidden;
@@ -261,10 +441,27 @@ export const DestinationCard = styled.div<{ isSelected?: boolean }>`
   transition: all 0.3s ease;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
   border: ${props => props.isSelected ? '3px solid #fff' : 'none'};
+  margin: 0 auto;
   
   &:hover {
     transform: translateY(-8px);
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+  }
+  
+  @media (max-width: 768px) {
+    max-width: 250px;
+    
+    &:hover {
+      transform: translateY(-4px);
+    }
+  }
+  
+  @media (max-width: 480px) {
+    max-width: 100%;
+    
+    &:hover {
+      transform: translateY(-2px);
+    }
   }
 `;
 
@@ -276,11 +473,19 @@ export const DestinationImage = styled.div<{ bgImage: string }>`
   background-size: cover;
   background-position: center;
   position: relative;
+  
+  @media (max-width: 480px) {
+    height: 140px;
+  }
 `;
 
 export const DestinationInfo = styled.div`
   padding: 1.2rem;
   color: #333;
+  
+  @media (max-width: 480px) {
+    padding: 1rem;
+  }
 `;
 
 export const DestinationTitle = styled.h3`
@@ -288,6 +493,10 @@ export const DestinationTitle = styled.h3`
   font-weight: 600;
   margin: 0 0 0.3rem 0;
   color: #2c5530;
+  
+  @media (max-width: 480px) {
+    font-size: 1rem;
+  }
 `;
 
 export const DestinationSubtitle = styled.h4`
@@ -295,6 +504,10 @@ export const DestinationSubtitle = styled.h4`
   font-weight: 500;
   margin: 0 0 0.6rem 0;
   color: #666;
+  
+  @media (max-width: 480px) {
+    font-size: 0.85rem;
+  }
 `;
 
 export const DestinationDescription = styled.p`
@@ -303,6 +516,11 @@ export const DestinationDescription = styled.p`
   margin: 0;
   color: #555;
   font-weight: 400;
+  
+  @media (max-width: 480px) {
+    font-size: 0.8rem;
+    line-height: 1.3;
+  }
 `;
 
 // Elephant Icon
