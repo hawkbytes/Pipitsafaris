@@ -49,7 +49,7 @@ const Footer: React.FC = () => {
           <FooterTop>
             <LogoSection>
               <Logo>
-                <img src="https://cloudsafaris.com/combo-logo-neutral-600.png" alt="Pipitsafaris logo" />
+                <span style={{ fontSize: '1.5rem', fontWeight: 'bold', color: '#333' }}>Pipitsafaris</span>
               </Logo>
               <LogoSubtext>Book your trip to East Africa today</LogoSubtext>
               
@@ -77,11 +77,8 @@ const Footer: React.FC = () => {
               </SocialIcons>
 
               <TicoSection>
-                <TicoLogo>
-                  <img src="https://cloudsafaris.com/tico-coloured.png" alt="TICO Logo" />
-                </TicoLogo>
-                <TicoText href="https://www.tico.ca/">
-                  TICO Registration #: 50027812 (Retail), 50027813 (Wholesale)
+                <TicoText>
+                  TIN: 137-282-046 | Tanzania Revenue Authority
                 </TicoText>
               </TicoSection>
             </LogoSection>
@@ -140,16 +137,18 @@ const Footer: React.FC = () => {
 
               <FooterColumn>
                 <ColumnTitle>Contact Us</ColumnTitle>
-                <ContactLink href="tel:+18888590890">+1 (888) 859-0890</ContactLink>
-                <ContactLink href="mailto:hello@pipitsafaris.com?subject=Contact Us">hello@pipitsafaris.com</ContactLink>
-                <Address>154 University Ave Suite 601 Toronto, ON M5H 3Y9</Address>
+                <ContactLink href="tel:+255755188881">+255755188881</ContactLink>
+                <ContactLink href="tel:+79166984469">+7 916 598-44-69</ContactLink>
+                <ContactLink href="mailto:info@pipitsafaris.com?subject=Contact Us">info@pipitsafaris.com</ContactLink>
+                <ContactLink href="mailto:Julia@pipitsafaris.com?subject=Contact Us">Julia@pipitsafaris.com</ContactLink>
+                <Address>Address P.O. Box 10012 Arusha Tanzania</Address>
               </FooterColumn>
             </FooterColumns>
           </FooterTop>
 
           <FooterBottom>
             <p></p>
-            <p>© 2025 CloudSafari, Inc. (Ontario, Canada) All rights reserved.</p>
+            <p>© 2025 Pipit Tours and Safaris Limited (Arusha, Tanzania) All rights reserved.</p>
           </FooterBottom>
         </FooterContent>
       </FooterContainer>

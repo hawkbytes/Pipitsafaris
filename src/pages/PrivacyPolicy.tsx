@@ -24,7 +24,7 @@ const PrivacyPolicy: React.FC = () => {
             <div>
               <p>Last Updated: January 15, 2025</p>
               
-              <p>Pipitsafari Inc. ("Pipitsafaris," "we," "us," or "our") respects your privacy and is committed to protecting your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website, mobile application, or use our services (collectively, the "Pipitsafaris Platform").</p>
+              <p>Pipit Tours and Safaris Limited ("Pipitsafaris," "we," "us," or "our") respects your privacy and is committed to protecting your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website, mobile application, or use our services (collectively, the "Pipitsafaris Platform").</p>
               
               <h2 className="h4 fw-bold">1. Information We Collect</h2>
               
@@ -182,42 +182,45 @@ const PrivacyPolicy: React.FC = () => {
               <p>If you have any questions, concerns, or requests regarding this Privacy Policy or our privacy practices, please contact us at:</p>
               
               <div className="mt-4 p-4 bg-light rounded">
-                <p className="mb-2"><strong>Pipitsafari Inc.</strong></p>
-                <p className="mb-2">4230 Sherwoodtowne Blvd, Mississauga, ON L4Z 2G6</p>
+                <p className="mb-2"><strong>Pipit Tours and Safaris Limited</strong></p>
+                <p className="mb-2">P.O. Box 10012, Arusha, Tanzania</p>
                 <p className="mb-2">Email: <a href="mailto:privacy@pipitsafaris.com" className="text-decoration-underline fw-medium">privacy@pipitsafaris.com</a></p>
-                <p className="mb-0">Phone: +1 888 859 0890</p>
+                <p className="mb-0">Phone: +255755188881</p>
               </div>
               
               <div className="mt-5 pt-4 border-top">
-                <h3 className="h4 fw-bold">Corporations Canada</h3>
+                <h3 className="h4 fw-bold">Corporate Information</h3>
                 <div className="row">
                   <div className="col-md-6">
                     <div className="mb-3">
-                      <div className="small fw-bold text-uppercase text-muted">TICO Registration #</div>
-                      <div>50027812 (Retail)</div>
-                      <div>50027813 (Wholesale)</div>
+                      <div className="small fw-bold text-uppercase text-muted">TIN (Taxpayer Identification Number)</div>
+                      <div>137-282-046</div>
                     </div>
                     <div className="mb-3">
                       <div className="small fw-bold text-uppercase text-muted">Corporation Name</div>
-                      <div>Pipitsafari, Inc.</div>
+                      <div>Pipit Tours and Safaris Limited</div>
                     </div>
                     <div className="mb-3">
-                      <div className="small fw-bold text-uppercase text-muted">Operating Name</div>
-                      <div>Pipitsafaris Canada</div>
+                      <div className="small fw-bold text-uppercase text-muted">Registration Authority</div>
+                      <div>Tanzania Revenue Authority</div>
+                    </div>
+                    <div className="mb-3">
+                      <div className="small fw-bold text-uppercase text-muted">Registration Date</div>
+                      <div>09 August 2018</div>
                     </div>
                   </div>
                   <div className="col-md-6">
                     <div className="mb-3">
-                      <div className="small fw-bold text-uppercase text-muted">Address</div>
-                      <div>4230 Sherwoodtowne Blvd, Mississauga, ON L4Z 2G6</div>
+                      <div className="small fw-bold text-uppercase text-muted">TRA Location</div>
+                      <div>Arusha</div>
                     </div>
                     <div className="mb-3">
-                      <div className="small fw-bold text-uppercase text-muted">Phone</div>
-                      <div>+1 888 859 0890</div>
+                      <div className="small fw-bold text-uppercase text-muted">Tax Office</div>
+                      <div>Arusha</div>
                     </div>
                     <div className="mb-3">
-                      <div className="small fw-bold text-uppercase text-muted">Email</div>
-                      <div><a href="mailto:hello@pipitsafaris.com" className="text-decoration-underline fw-medium">hello@pipitsafaris.com</a></div>
+                      <div className="small fw-bold text-uppercase text-muted">Physical Location</div>
+                      <div>Olamuriaki, Sombetini, Arusha</div>
                     </div>
                   </div>
                 </div>

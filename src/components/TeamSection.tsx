@@ -67,7 +67,7 @@ const TeamSection: React.FC = () => {
                         Drawing from his family's extensive 50+ years of experience in Tanzanian safaris, he has spent considerable time 
                         in Kenya and Tanzania, gaining unique insights into safari operations. Josh's technological acumen, evidenced by 
                         his role as a Founding Engineer at webapp.io, combined with his entrepreneurial ventures in startups and non-profits 
-                        like Tanzanite Toronto, has positioned him at the forefront of innovating online safari travel with Pipitsafaris.
+                        like Tanzanite Arusha, has positioned him at the forefront of innovating online safari travel with Pipitsafaris.
                       </p>
                     </div>
                   </div>

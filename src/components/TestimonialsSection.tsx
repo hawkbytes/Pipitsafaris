@@ -19,7 +19,7 @@ const TestimonialsSection: React.FC = () => {
       id: 1,
       name: "Rita & Larry",
       date: "June 2025",
-      location: "Toronto, Canada",
+      location: "Arusha, Tanzania",
       image: "https://static.cloudsafaris.com/public/e83c3b6f-68cf-4be3-8e5e-bb852f9f65c3.jpg?action=get",
       review: "What an amazing safari! Huge thank you for putting it all together. We saw everything — elephants, zebras, ostriches, a lioness resting in the middle of the road, lion...",
       fullReview: "What an amazing safari! Huge thank you for putting it all together. We saw everything — elephants, zebras, ostriches, a lioness resting in the middle of the road, lions sleeping under trees, and so much more. The accommodations were excellent, and our guide was incredibly knowledgeable. This trip exceeded all our expectations!"
@@ -82,10 +82,10 @@ const TestimonialsSection: React.FC = () => {
       id: 8,
       name: "Angela & Din",
       date: "February 2024",
-      location: "Aliston, Canada",
+      location: "Dar es Salaam, Tanzania",
       image: "https://static.cloudsafaris.com/public/Angela&Din.jpeg?action=get",
-      review: "The booking process with CloudSafaris was truly exceptional and stood out as one of the best experiences we've ever had with an agency. Unlike other companies we've dealt with in t...",
-      fullReview: "The booking process with CloudSafaris was truly exceptional and stood out as one of the best experiences we've ever had with an agency. Unlike other companies we've dealt with in the past, they provided clear communication, detailed planning, and exceptional service throughout."
+      review: "The booking process with Pipitsafaris was truly exceptional and stood out as one of the best experiences we've ever had with an agency. Unlike other companies we've dealt with in t...",
+      fullReview: "The booking process with Pipitsafaris was truly exceptional and stood out as one of the best experiences we've ever had with an agency. Unlike other companies we've dealt with in the past, they provided clear communication, detailed planning, and exceptional service throughout."
     },
     {
       id: 9,
@@ -100,25 +100,25 @@ const TestimonialsSection: React.FC = () => {
       id: 10,
       name: "Brandon",
       date: "February 2024",
-      location: "Alberta, Canada",
+      location: "Mwanza, Tanzania",
       image: "https://static.cloudsafaris.com/public/IMG_8246.jpg?action=get",
-      review: "Booking my trips to Amboseli National Park and Mount Kilimanjaro through CloudSafaris were smooth and straightforward. Their planning and attention to detail let me spend more time...",
-      fullReview: "Booking my trips to Amboseli National Park and Mount Kilimanjaro through CloudSafaris were smooth and straightforward. Their planning and attention to detail let me spend more time enjoying the experience rather than worrying about logistics. Highly recommended!"
+      review: "Booking my trips to Amboseli National Park and Mount Kilimanjaro through Pipitsafaris were smooth and straightforward. Their planning and attention to detail let me spend more time...",
+      fullReview: "Booking my trips to Amboseli National Park and Mount Kilimanjaro through Pipitsafaris were smooth and straightforward. Their planning and attention to detail let me spend more time enjoying the experience rather than worrying about logistics. Highly recommended!"
     },
     {
       id: 11,
       name: "Alysha & Colin",
       date: "January 2024",
-      location: "Canada",
+      location: "Tanzania",
       image: "https://static.cloudsafaris.com/public/Colin&Alysha.jpeg?action=get",
-      review: "We had a fantastic time on our trip to Tanzania!! It was a once in a lifetime trip and we made memories that will last a lifetime!! CloudSafaris did an amazing job organizing the t...",
-      fullReview: "We had a fantastic time on our trip to Tanzania!! It was a once in a lifetime trip and we made memories that will last a lifetime!! CloudSafaris did an amazing job organizing the trip, and everything went smoothly. We can't wait to book our next adventure with them!"
+      review: "We had a fantastic time on our trip to Tanzania!! It was a once in a lifetime trip and we made memories that will last a lifetime!! Pipitsafaris did an amazing job organizing the t...",
+      fullReview: "We had a fantastic time on our trip to Tanzania!! It was a once in a lifetime trip and we made memories that will last a lifetime!! Pipitsafaris did an amazing job organizing the trip, and everything went smoothly. We can't wait to book our next adventure with them!"
     },
     {
       id: 12,
       name: "Suzanne & Paul",
       date: "November 2023",
-      location: "Mississauga, Canada",
+      location: "Dodoma, Tanzania",
       image: "https://static.cloudsafaris.com/public/Suzanne.jpeg?action=get",
       review: "We want to say thanks again for arranging the most incredible trip ever for us!!! We'll never forget it ❤️🌍",
       fullReview: "We want to say thanks again for arranging the most incredible trip ever for us!!! We'll never forget it ❤️🌍 Every moment was perfectly planned and executed. The team made our dream safari a reality!"
@@ -129,8 +129,8 @@ const TestimonialsSection: React.FC = () => {
       date: "March 2023",
       location: "New York, USA",
       image: "https://static.cloudsafaris.com/public/image001.jpg?action=get",
-      review: "I am pleased to say that I could not be happier with the outcome. The entire trip from start to finish far exceeded my expectations. CloudSafaris offered personalized attention, gr...",
-      fullReview: "I am pleased to say that I could not be happier with the outcome. The entire trip from start to finish far exceeded my expectations. CloudSafaris offered personalized attention, great communication, and delivered an unforgettable experience that I will treasure forever."
+      review: "I am pleased to say that I could not be happier with the outcome. The entire trip from start to finish far exceeded my expectations. Pipitsafaris offered personalized attention, gr...",
+      fullReview: "I am pleased to say that I could not be happier with the outcome. The entire trip from start to finish far exceeded my expectations. Pipitsafaris offered personalized attention, great communication, and delivered an unforgettable experience that I will treasure forever."
     }
   ];
 

@@ -55,13 +55,13 @@ const TermsOfService: React.FC = () => {
                 </div>
               </div>
               
-              <p><strong>Section 25 of these Terms contains an arbitration agreement and class action waiver that apply to all claims brought against Pipitsafaris in Canada. Please read them carefully.</strong></p>
+              <p><strong>Section 25 of these Terms contains an arbitration agreement and class action waiver that apply to all claims brought against Pipitsafaris in Tanzania. Please read them carefully.</strong></p>
               
               <p>Last Updated: January 15, 2025</p>
               
-              <p>These Terms of Service ("Terms") are a binding legal agreement between you and Pipitsafari Inc. (Pipitsafaris Canada) that govern your right to use the websites, applications, and other offerings from Pipitsafari Inc. (collectively, the "Pipitsafaris Platform"). When used in these Terms, "Pipitsafaris," "we," "us," or "our" refers to Pipitsafari Inc. with whom you are contracting.</p>
+              <p>These Terms of Service ("Terms") are a binding legal agreement between you and Pipit Tours and Safaris Limited (Pipitsafaris Tanzania) that govern your right to use the websites, applications, and other offerings from Pipit Tours and Safaris Limited (collectively, the "Pipitsafaris Platform"). When used in these Terms, "Pipitsafaris," "we," "us," or "our" refers to Pipit Tours and Safaris Limited with whom you are contracting.</p>
               
-              <p>The Pipitsafaris Platform offers an online venue that enables users ("Members") to publish, offer, search for, and book services. Members who publish and offer services are "Tour Operators." Members who search for, book, or use services are "Guests." Pipitsafari Inc. offers accommodations ("Accommodations"), activities, excursions, events ("Experiences"), safaris ("Safaris"), and a variety of travel and other services (collectively, "Tour Operator Services," and each Tour Operator Service offering, a "Listing"). You must register an account to access and use many features of the Pipitsafaris Platform, and must keep your account information accurate. As the provider of the Pipitsafaris Platform, Pipitsafaris does not own, control, offer or manage any Listings, Tour Operator Services, or safari services. Pipitsafaris is not a party to the contracts entered into directly between Tour Operators and Guests, nor is Pipitsafaris a real-estate broker, or insurer. Pipitsafaris is not acting as an agent in any capacity for any Member, except as specified in the Payments Terms of Service ("Payment Terms").</p>
+              <p>The Pipitsafaris Platform offers an online venue that enables users ("Members") to publish, offer, search for, and book services. Members who publish and offer services are "Tour Operators." Members who search for, book, or use services are "Guests." Pipit Tours and Safaris Limited offers accommodations ("Accommodations"), activities, excursions, events ("Experiences"), safaris ("Safaris"), and a variety of travel and other services (collectively, "Tour Operator Services," and each Tour Operator Service offering, a "Listing"). You must register an account to access and use many features of the Pipitsafaris Platform, and must keep your account information accurate. As the provider of the Pipitsafaris Platform, Pipitsafaris does not own, control, offer or manage any Listings, Tour Operator Services, or safari services. Pipitsafaris is not a party to the contracts entered into directly between Tour Operators and Guests, nor is Pipitsafaris a real-estate broker, or insurer. Pipitsafaris is not acting as an agent in any capacity for any Member, except as specified in the Payments Terms of Service ("Payment Terms").</p>
               
               <p>We maintain other policies that supplement these Terms like our Privacy Policy, which describes our collection and use of personal data, and our Booking Terms, which govern any payment services provided to Members by the Pipitsafaris entity (collectively "Pipitsafaris Payments"). If you are a Tour Operator, Guide, or Accommodation Tour Operator, you are responsible for understanding and complying with all laws, rules, regulations and contracts with third parties that apply to your Tour Operator Services.</p>
               
@@ -170,31 +170,38 @@ const TermsOfService: React.FC = () => {
               <p>If you or any member of your party suffers from a disability or other medical condition or is taking prescribed medication that may impact on the member's participation in the trip and/or activities, please tell us before you book. The Company is happy to give you advice and to try to assist you in choosing a vacation that will meet your requirements. However, most of our vacations are in destinations which are off the beaten track and lack even the simplest facilities for disabled guests such as ramps for wheelchairs, lifts and so on. Many of our vacations require a fair degree of physical fitness. Medical facilities may not be readily available.</p>
               
               <div className="mt-5 pt-4 border-top">
-                <h3 className="h4 fw-bold">Corporations Canada</h3>
+                <h3 className="h4 fw-bold">Corporate Information</h3>
                 <div className="row">
                   <div className="col-md-6">
                     <div className="mb-3">
-                      <div className="small fw-bold text-uppercase text-muted">TICO Registration #</div>
-                      <div>50027812 (Retail)</div>
-                      <div>50027813 (Wholesale)</div>
+                      <div className="small fw-bold text-uppercase text-muted">TIN (Taxpayer Identification Number)</div>
+                      <div>137-282-046</div>
                     </div>
                     <div className="mb-3">
                       <div className="small fw-bold text-uppercase text-muted">Corporation Name</div>
-                      <div>CloudSafari, Inc.</div>
+                      <div>Pipit Tours and Safaris Limited</div>
                     </div>
                     <div className="mb-3">
-                      <div className="small fw-bold text-uppercase text-muted">Operating Name</div>
-                      <div>Pipitsafaris Canada</div>
+                      <div className="small fw-bold text-uppercase text-muted">Registration Authority</div>
+                      <div>Tanzania Revenue Authority</div>
+                    </div>
+                    <div className="mb-3">
+                      <div className="small fw-bold text-uppercase text-muted">Registration Date</div>
+                      <div>09 August 2018</div>
                     </div>
                   </div>
                   <div className="col-md-6">
                     <div className="mb-3">
-                      <div className="small fw-bold text-uppercase text-muted">Address</div>
-                      <div>4230 Sherwoodtowne Blvd, Mississauga, ON L4Z 2G6</div>
+                      <div className="small fw-bold text-uppercase text-muted">TRA Location</div>
+                      <div>Arusha</div>
                     </div>
                     <div className="mb-3">
-                      <div className="small fw-bold text-uppercase text-muted">Phone</div>
-                      <div>+1 888 859 0890</div>
+                      <div className="small fw-bold text-uppercase text-muted">Tax Office</div>
+                      <div>Arusha</div>
+                    </div>
+                    <div className="mb-3">
+                      <div className="small fw-bold text-uppercase text-muted">Physical Location</div>
+                      <div>Olamuriaki, Sombetini, Arusha</div>
                     </div>
                     <div className="mb-3">
                       <div className="small fw-bold text-uppercase text-muted">Email</div>
