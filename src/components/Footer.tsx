@@ -135,6 +135,7 @@ const Footer: React.FC = () => {
                 <FooterLink href="/blog">Blog</FooterLink>
                 <FooterLink as={Link} to="/about-us">About Us</FooterLink>
                 <FooterLink as={Link} to="/for-advisors">Travel advisors</FooterLink>
+                <FooterLink href="https://www.tripadvisor.ru/Attraction_Review-g297913-d15613609-Reviews-or10-Pipit_Safari-Arusha_Arusha_Region.html" target="_blank" rel="noopener noreferrer">TripAdvisor Reviews</FooterLink>
               </FooterColumn>
 
               <FooterColumn>
