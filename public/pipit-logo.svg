@@ -1,0 +1,31 @@
+<svg width="160" height="60" viewBox="0 0 160 60" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle -->
+  <circle cx="30" cy="30" r="25" fill="#B85C3E"/>
+  
+  <!-- Bird silhouette -->
+  <g transform="translate(15, 15)">
+    <!-- Bird body -->
+    <ellipse cx="15" cy="18" rx="8" ry="4" fill="#2D3436"/>
+    <!-- Bird head -->
+    <circle cx="22" cy="15" r="4" fill="#2D3436"/>
+    <!-- Bird beak -->
+    <path d="M26 15 L30 14 L26 16 Z" fill="#2D3436"/>
+    <!-- Bird tail -->
+    <path d="M7 18 Q2 16, 4 22 Q6 20, 7 18" fill="#2D3436"/>
+    <!-- Bird wing -->
+    <path d="M12 16 Q18 12, 20 18 Q16 16, 12 16" fill="#1A1A1A"/>
+    <!-- Bird legs -->
+    <line x1="12" y1="22" x2="10" y2="28" stroke="#2D3436" stroke-width="1.5"/>
+    <line x1="18" y1="22" x2="20" y2="28" stroke="#2D3436" stroke-width="1.5"/>
+    <!-- Small claws -->
+    <path d="M9 28 L8 29 M10 28 L9 29 M11 28 L10 29" stroke="#2D3436" stroke-width="0.8" fill="none"/>
+    <path d="M19 28 L18 29 M20 28 L19 29 M21 28 L20 29" stroke="#2D3436" stroke-width="0.8" fill="none"/>
+  </g>
+  
+  <!-- Branch -->
+  <path d="M5 45 Q30 42, 55 45" stroke="#8B4513" stroke-width="2" fill="none"/>
+  
+  <!-- Text -->
+  <text x="70" y="25" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#2D3436">PIPIT</text>
+  <text x="70" y="42" font-family="Arial, sans-serif" font-size="14" font-weight="normal" fill="#B85C3E">SAFARI</text>
+</svg>

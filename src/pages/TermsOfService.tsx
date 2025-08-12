@@ -21,7 +21,7 @@ const TermsOfService: React.FC = () => {
                   <div>Our team has answers and would love to help.</div>
                   <div className="pt-4">
                     <a 
-                      href="mailto:hello@pipitsafaris.com?subject=Terms of Service" 
+                      href="mailto:info@pipitsafaris.com?subject=Terms of Service" 
                       className="text-dark border border-dark px-4 py-2 rounded text-decoration-none d-inline-flex align-items-center"
                       style={{
                         transition: 'all 0.3s ease'
@@ -66,7 +66,7 @@ const TermsOfService: React.FC = () => {
               <p>We maintain other policies that supplement these Terms like our Privacy Policy, which describes our collection and use of personal data, and our Booking Terms, which govern any payment services provided to Members by the Pipitsafaris entity (collectively "Pipitsafaris Payments"). If you are a Tour Operator, Guide, or Accommodation Tour Operator, you are responsible for understanding and complying with all laws, rules, regulations and contracts with third parties that apply to your Tour Operator Services.</p>
               
               <h2 className="h4 fw-bold">1. Our Mission.</h2>
-              <p>Our mission is to create a world where you can travel with simplicity and ease. From safaris to mountain climbing, to relaxing on a beach, browse through many travel options to find the ones that fit the way you like to travel and explore. Learn more about travel options by reviewing the description, blog posts, pictures, Tour Operator profiles, and Guest reviews. If you have questions, just message the Tour Operator or us at <a href="mailto:hello@pipitsafaris.com" className="text-decoration-underline fw-medium">hello@pipitsafaris.com</a>.</p>
+              <p>Our mission is to create a world where you can travel with simplicity and ease. From safaris to mountain climbing, to relaxing on a beach, browse through many travel options to find the ones that fit the way you like to travel and explore. Learn more about travel options by reviewing the description, blog posts, pictures, Tour Operator profiles, and Guest reviews. If you have questions, just message the Tour Operator or us at <a href="mailto:info@pipitsafaris.com" className="text-decoration-underline fw-medium">info@pipitsafaris.com</a>.</p>
               
               <h2 className="h3 fw-bold">Client Terms</h2>
               
@@ -92,7 +92,7 @@ const TermsOfService: React.FC = () => {
               
               <p>Payments can be made by bank transfer or by credit or debit card. While we do accept major credit cards including Visa, Mastercard and American Express, travelers must provide to us a click or signed authorization for every transaction for your trip. Your authorization is an agreement for us to charge your card and an acknowledgement and agreement to the Company Terms and Conditions and the Supplier Terms and Conditions including the cancellation terms. It is your responsibility to read and understand these rules, standards, policies, and requirements prior to booking a Listing. Be aware that some Tour Operators work with a Co-Tour Operators (other Operators) or as part of a team to provide their Tour Operator Services.</p>
               
-              <p>It is important for you to check the details on the Confirmation Invoice as soon as you get it. In the event of any discrepancy please contact us immediately at <a href="mailto:hello@Pipitsafaris.com?subject=Terms" className="text-decoration-underline fw-medium">hello@Pipitsafaris.com.</a> Pipitsafaris will be responsible for making payments to Third Party Suppliers on confirmed bookings by you on your behalf and remitting the booking fee element to the Company.</p>
+              <p>It is important for you to check the details on the Confirmation Invoice as soon as you get it. In the event of any discrepancy please contact us immediately at <a href="mailto:info@pipitsafaris.com?subject=Terms" className="text-decoration-underline fw-medium">info@pipitsafaris.com.</a> Pipitsafaris will be responsible for making payments to Third Party Suppliers on confirmed bookings by you on your behalf and remitting the booking fee element to the Company.</p>
               
               <h4 className="h6 fw-semibold fst-italic">2.2.2 Accommodation Reservations</h4>
               <p>An Accommodation Reservation is a limited license to enter, occupy, and use the Accommodation. The Accommodation staff retain the right to re-enter the Accommodation during your stay, to the extent: (i) it is reasonably necessary, (ii) permitted by your contract with the Accommodation, and (iii) consistent with applicable law. If you stay past checkout, the Accommodation has the right to make you leave in a manner consistent with applicable law, including by imposing reasonable overstay penalties. You may not exceed the maximum number of allowed Guests. Accommodation Reservations also extend to the hotels, lodges, camps, tented lodges and other housing.</p>
@@ -205,7 +205,7 @@ const TermsOfService: React.FC = () => {
                     </div>
                     <div className="mb-3">
                       <div className="small fw-bold text-uppercase text-muted">Email</div>
-                      <div><a href="mailto:hello@Pipitsafaris.com" className="text-decoration-underline fw-medium">hello@Pipitsafaris.com</a></div>
+                      <div><a href="mailto:info@pipitsafaris.com" className="text-decoration-underline fw-medium">info@pipitsafaris.com</a></div>
                     </div>
                   </div>
                 </div>

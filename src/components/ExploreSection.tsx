@@ -159,14 +159,14 @@ const ExploreSection: React.FC = () => {
                   <div className="w-100 h-100 d-flex flex-column align-items-center position-relative">
                     <div className="position-relative text-center w-100">
                       <img 
-                        src="https://cloudsafaris.com/photos/public/03aa4ebf-217a-49ed-91bd-f55792e48914_f93086e1-4ee1-4b07-bd9b-d781446b12b5_carlos-torres-2buV9JU4jaI-unsplash.jpeg?action=get"
-                        alt="5 Days Kenya Essence Explicit"
+                        src="https://static.cloudsafaris.com/public/elephant-herd-masai-mara-smaller.jpg?action=get"
+                        alt="Trips for everyone"
                         className="w-100 rounded-3 shadow"
                         style={{
                           height: '60vh',
                           maxHeight: '554px',
                           objectFit: 'cover',
-                          objectPosition: 'bottom'
+                          objectPosition: 'center'
                         }}
                       />
                       
@@ -209,7 +209,7 @@ const ExploreSection: React.FC = () => {
                             }}
                           >
                             <svg width="12" height="12" fill="currentColor" viewBox="0 0 320 512">
-                              <path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z"/>
+                              <path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c-12.5-12.5 12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"/>
                             </svg>
                           </button>
                         </div>
@@ -227,9 +227,9 @@ const ExploreSection: React.FC = () => {
                                     key={i}
                                     className="rounded-circle"
                                     style={{
-                                      width: i === 20 ? '8px' : '6px',
-                                      height: i === 20 ? '8px' : '6px',
-                                      backgroundColor: i === 20 ? 'white' : 'rgba(255,255,255,0.8)',
+                                      width: i === 0 ? '8px' : '6px',
+                                      height: i === 0 ? '8px' : '6px',
+                                      backgroundColor: i === 0 ? 'white' : 'rgba(255,255,255,0.8)',
                                       backdropFilter: 'blur(4px)',
                                       cursor: 'pointer'
                                     }}
@@ -250,7 +250,7 @@ const ExploreSection: React.FC = () => {
                                 >
                                   <span>View 5 Days Kenya Essence Explicit</span>
                                   <svg width="12" height="12" fill="currentColor" viewBox="0 0 320 512">
-                                    <path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5 12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"/>
+                                    <path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5 45.3 0s12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"/>
                                   </svg>
                                 </a>
                               </div>

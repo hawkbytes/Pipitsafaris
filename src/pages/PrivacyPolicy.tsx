@@ -184,7 +184,7 @@ const PrivacyPolicy: React.FC = () => {
               <div className="mt-4 p-4 bg-light rounded">
                 <p className="mb-2"><strong>Pipit Tours and Safaris Limited</strong></p>
                 <p className="mb-2">P.O. Box 10012, Arusha, Tanzania</p>
-                <p className="mb-2">Email: <a href="mailto:privacy@pipitsafaris.com" className="text-decoration-underline fw-medium">privacy@pipitsafaris.com</a></p>
+                <p className="mb-2">Email: <a href="mailto:info@pipitsafaris.com" className="text-decoration-underline fw-medium">info@pipitsafaris.com</a></p>
                 <p className="mb-0">Phone: +255755188881</p>
               </div>
               
@@ -235,7 +235,7 @@ const PrivacyPolicy: React.FC = () => {
                 <div>Our team has answers and would love to help.</div>
                 <div className="pt-4">
                   <a 
-                    href="mailto:hello@pipitsafaris.com?subject=Privacy Policy" 
+                    href="mailto:info@pipitsafaris.com?subject=Privacy Policy" 
                     className="text-dark border border-dark px-4 py-2 rounded text-decoration-none d-inline-flex align-items-center"
                     style={{
                       transition: 'all 0.3s ease'
