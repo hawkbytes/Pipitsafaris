@@ -3,7 +3,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 import Footer from '../components/Footer';
 import PageHeader from '../components/PageHeader';
 
-const TermsOfService: React.FC = () => {
+const PrivacyPolicy: React.FC = () => {
   return (
     <>
     <PageHeader/>
@@ -11,163 +11,182 @@ const TermsOfService: React.FC = () => {
       <Row>
         <Col lg={8} className="mx-auto">
           <div className="mb-5">
-            <div className="d-flex flex-column gap-4 align-items-start">
-              <h1 className="display-4 fw-bold">Terms of Service</h1>
-              
-              {/* Right side contact section */}
-              <div className="position-absolute end-0 me-5" style={{ top: '20px' }}>
-                <div className="d-flex flex-column gap-1">
-                  <div className="h3 fw-bold">Still have questions for us?</div>
-                  <div>Our team has answers and would love to help.</div>
-                  <div className="pt-4">
-                    <a 
-                      href="mailto:info@pipitsafaris.com?subject=Terms of Service" 
-                      className="text-dark border border-dark px-4 py-2 rounded text-decoration-none d-inline-flex align-items-center"
-                      style={{
-                        transition: 'all 0.3s ease'
-                      }}
-                      onMouseEnter={(e) => {
-                        e.currentTarget.style.backgroundColor = '#000';
-                        e.currentTarget.style.color = '#fff';
-                      }}
-                      onMouseLeave={(e) => {
-                        e.currentTarget.style.backgroundColor = 'transparent';
-                        e.currentTarget.style.color = '#000';
-                      }}
-                    >
-                      Contact Us
-                      <svg 
-                        aria-hidden="true" 
-                        focusable="false" 
-                        className="ms-2" 
-                        style={{ width: '14px', height: '14px' }}
-                        role="img" 
-                        xmlns="http://www.w3.org/2000/svg" 
-                        viewBox="0 0 320 512"
-                      >
-                        <path 
-                          fill="currentColor" 
-                          d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"
-                        />
-                      </svg>
-                    </a>
-                  </div>
-                </div>
+            {/* Header with flexbox layout */}
+            <div className="d-flex justify-content-between align-items-start mb-4">
+              <div>
+                <h1 className="display-4 fw-bold">Privacy Policy</h1>
               </div>
               
-              <p><strong>Section 25 of these Terms contains an arbitration agreement and class action waiver that apply to all claims brought against Pipitsafaris in Tanzania. Please read them carefully.</strong></p>
-              
+           
+            </div>
+            
+            {/* Main content */}
+            <div>
               <p>Last Updated: January 15, 2025</p>
               
-              <p>These Terms of Service ("Terms") are a binding legal agreement between you and Pipit Tours and Safaris Limited (Pipitsafaris Tanzania) that govern your right to use the websites, applications, and other offerings from Pipit Tours and Safaris Limited (collectively, the "Pipitsafaris Platform"). When used in these Terms, "Pipitsafaris," "we," "us," or "our" refers to Pipit Tours and Safaris Limited with whom you are contracting.</p>
+              <p>Pipit Tours and Safaris Limited ("Pipitsafaris," "we," "us," or "our") respects your privacy and is committed to protecting your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website, mobile application, or use our services (collectively, the "Pipitsafaris Platform").</p>
               
-              <p>The Pipitsafaris Platform offers an online venue that enables users ("Members") to publish, offer, search for, and book services. Members who publish and offer services are "Tour Operators." Members who search for, book, or use services are "Guests." Pipit Tours and Safaris Limited offers accommodations ("Accommodations"), activities, excursions, events ("Experiences"), safaris ("Safaris"), and a variety of travel and other services (collectively, "Tour Operator Services," and each Tour Operator Service offering, a "Listing"). You must register an account to access and use many features of the Pipitsafaris Platform, and must keep your account information accurate. As the provider of the Pipitsafaris Platform, Pipitsafaris does not own, control, offer or manage any Listings, Tour Operator Services, or safari services. Pipitsafaris is not a party to the contracts entered into directly between Tour Operators and Guests, nor is Pipitsafaris a real-estate broker, or insurer. Pipitsafaris is not acting as an agent in any capacity for any Member, except as specified in the Payments Terms of Service ("Payment Terms").</p>
+              <h2 className="h4 fw-bold">1. Information We Collect</h2>
               
-              <p>We maintain other policies that supplement these Terms like our Privacy Policy, which describes our collection and use of personal data, and our Booking Terms, which govern any payment services provided to Members by the Pipitsafaris entity (collectively "Pipitsafaris Payments"). If you are a Tour Operator, Guide, or Accommodation Tour Operator, you are responsible for understanding and complying with all laws, rules, regulations and contracts with third parties that apply to your Tour Operator Services.</p>
-              
-              <h2 className="h4 fw-bold">1. Our Mission.</h2>
-              <p>Our mission is to create a world where you can travel with simplicity and ease. From safaris to mountain climbing, to relaxing on a beach, browse through many travel options to find the ones that fit the way you like to travel and explore. Learn more about travel options by reviewing the description, blog posts, pictures, Tour Operator profiles, and Guest reviews. If you have questions, just message the Tour Operator or us at <a href="mailto:info@pipitsafaris.com" className="text-decoration-underline fw-medium">info@pipitsafaris.com</a>.</p>
-              
-              <h2 className="h3 fw-bold">Client Terms</h2>
-              
-              <h2 className="h4 fw-bold">2. Searching, Booking and Cancellations on Pipitsafaris.</h2>
-              
-              <h3 className="h5 fw-bold text-muted">2.1 Searching</h3>
-              <p>You can search for Safari Services by using criteria like the travel destination, accommodation type, travel dates, and number of guests. You can also use filters to refine your search results. Search results are based on their relevance to your search and other criteria. Relevance considers factors like price, availability, Reviews, customer service and cancellation history, popularity, previous trips and saved Listings, Tour Operator requirements (e.g. minimum age requirement), and more.</p>
-              
-              <h3 className="h5 fw-bold text-muted">2.2 Booking your vacation</h3>
-              
-              <h4 className="h6 fw-semibold fst-italic">2.2.1 Payments & Invoicing</h4>
-              <p>Our aim is to provide exactly the right travel arrangements to suit your requirements.</p>
-              
-              <p>When you book a safari service, you are agreeing to pay all charges for your booking including the Safari service price, applicable fees, Pipitsafaris' service fee, offline fees, taxes, and any other items identified during checkout (collectively, "Total Price"). You are also agreeing that Pipitsafaris may charge the Payment Method (as defined in the Payment Terms) used to book the Safari Service in order to collect Damage Claim (as defined in Section 17) amounts.</p>
-              
-              <p>When you receive the booking confirmation, a contract for Tour Operator Services (a "Reservation") is formed directly between you, the Accommodation(s), Transportation Partners, and the Tour Operator. In addition to these Terms, you will be subject to, and responsible for complying with, all terms of the Reservation, including without limitation, the cancellation policy and any other rules, standards, policies, or requirements identified in the Listing or during checkout that apply to the Reservation.</p>
-              
-              <p>The deposit required to book your trip is shown on your quotation. The deposit will be 30% of the total trip price, excepting air travel and any permits which need to be paid for in full at time of booking as tickets will be issued immediately and are non-refundable ('the Deposit'). Occasionally an additional deposit may be requested in order to secure a booking e.g., for peak departure periods ("The Additional Deposit"). The purpose of the Deposit, other than payment to Third Party Suppliers, is to cover costs, disbursements and service fee incurred by Pipitsafaris and in the event of any cancellation as provided for herein the Deposit and any Additional Deposit will be forfeited by the Client.</p>
-              
-              <p>You must make all payments in full and on time. <strong>Failure to make a payment may result in the cancellation of your travel and the forfeiture of your Deposit and any Additional Deposit</strong>. In such a case this would be considered a cancellation by you and the cancellation terms and fees as described below would be in effect. We reserve the right to refuse service to anyone. In such case, a full refund would be provided, and we would have no further liability to you.</p>
-              
-              <p>Your final balance will be due in full three calendar months prior to departure. Trips booked within three months of travel require full payment at the time of booking.</p>
-              
-              <p>Payments can be made by bank transfer or by credit or debit card. While we do accept major credit cards including Visa, Mastercard and American Express, travelers must provide to us a click or signed authorization for every transaction for your trip. Your authorization is an agreement for us to charge your card and an acknowledgement and agreement to the Company Terms and Conditions and the Supplier Terms and Conditions including the cancellation terms. It is your responsibility to read and understand these rules, standards, policies, and requirements prior to booking a Listing. Be aware that some Tour Operators work with a Co-Tour Operators (other Operators) or as part of a team to provide their Tour Operator Services.</p>
-              
-              <p>It is important for you to check the details on the Confirmation Invoice as soon as you get it. In the event of any discrepancy please contact us immediately at <a href="mailto:info@pipitsafaris.com?subject=Terms" className="text-decoration-underline fw-medium">info@pipitsafaris.com.</a> Pipitsafaris will be responsible for making payments to Third Party Suppliers on confirmed bookings by you on your behalf and remitting the booking fee element to the Company.</p>
-              
-              <h4 className="h6 fw-semibold fst-italic">2.2.2 Accommodation Reservations</h4>
-              <p>An Accommodation Reservation is a limited license to enter, occupy, and use the Accommodation. The Accommodation staff retain the right to re-enter the Accommodation during your stay, to the extent: (i) it is reasonably necessary, (ii) permitted by your contract with the Accommodation, and (iii) consistent with applicable law. If you stay past checkout, the Accommodation has the right to make you leave in a manner consistent with applicable law, including by imposing reasonable overstay penalties. You may not exceed the maximum number of allowed Guests. Accommodation Reservations also extend to the hotels, lodges, camps, tented lodges and other housing.</p>
-              
-              <h4 className="h6 fw-semibold fst-italic">2.2.3 Reservations for Experiences and Other Tour Operator Services</h4>
-              <p>An Experience or other Tour Operator Service Reservation entitles you to participate in, attend, or use that Tour Operator Service. You are responsible for confirming that you, and anyone you invite, meet minimum age, proficiency, fitness, or other requirements. You are responsible for informing the Tour Operator of any medical or physical conditions, or other circumstances that may impact your ability to participate, attend, or use the Tour Operator Service. Except where expressly authorized, you may not allow any person to join a Tour Operator Service unless they are included as an additional guest during the booking process.</p>
-              
-              <h4 className="h6 fw-semibold fst-italic">2.2.4 Booking Modifications & Amendments.</h4>
-              <p>The Company will make every effort to assist you if you wish to alter your arrangements. Guests and Tour Operators are responsible for any booking modifications they agree to make via the Pipitsafaris Platform or direct Pipitsafaris customer service to make on their behalf ("Booking Modifications"). If it is possible to make the amendment, it will be subject to any fees charged by our suppliers, together with all communication charges or other expenses incurred by the Company as a result of the change.</p>
-              
-              <h3 className="h5 fw-bold text-muted">2.3 Cancellations</h3>
-              
-              <h4 className="h6 fw-semibold fst-italic">2.3.1 Travel Issues, and Refunds</h4>
-              <p>In general, if as a Guest you cancel a Reservation, the amount refunded to you is determined by the cancellation policy (as determined by Pipitsafaris and the Tour Operator) that applies to that Reservation. But, in certain situations, other policies take precedence and determine what amount is refunded to you. If the Tour Operator cancels, or you experience a Travel Issue (as defined in our Guest Refund Policy), you may be eligible for rebooking assistance or a partial or full refund pending the circumstance as evaluated by Pipitsafaris.</p>
-              
-              <p>All cancellations are subject to the Supplier Terms and Conditions of the Third Party Suppliers. Some Third Party Suppliers may choose to offer future travel credits in lieu of a cash refund. Pipitsafaris is not liable for a Third Party Supplier's failure to provide a refund or for Third Party Supplier insolvency or bankruptcy.</p>
-              
-              <h4 className="h6 fw-semibold fst-italic">2.3.2 Guest Policy</h4>
-              <p>The Guest Policy provides guidelines for Guests in cases of cancellations, refunds, and rebookings. This policy ensures fairness to both Guests and Tour Operators while maintaining flexibility under extenuating circumstances.</p>
-              
-              <ul className="list-unstyled ps-4">
-                <li className="mb-3">
-                  <p>Guests may cancel their reservation <span className="fw-bold">121 days</span> or more before the tour start date:</p>
-                  <ul className="list-unstyled ps-4">
-                    <li><p>If payment is made via credit card, a full refund of the deposit amount (30%) will be issued minus the <span className="fw-bold">3.0% + $0.30</span> credit card processing fee.</p></li>
-                    <li><p>If payment is made via other methods, a full refund of the deposit amount (30%) will be issued.</p></li>
-                  </ul>
-                </li>
-                <li className="mb-3">
-                  <p>For cancellations made <span className="fw-bold">120 to 61 days</span> before the tour start date:</p>
-                  <ul className="list-unstyled ps-4">
-                    <li><p><span className="fw-bold">30%</span> of the total tour price or the deposit paid becomes non-refundable, subject to third-party supplier increases.</p></li>
-                  </ul>
-                </li>
-                <li className="mb-3">
-                  <p>For cancellations made <span className="fw-bold">60 to 46 days</span> before the tour start date:</p>
-                  <ul className="list-unstyled ps-4">
-                    <li><p><span className="fw-bold">85%</span> of the total tour price will be charged as a cancellation fee.</p></li>
-                  </ul>
-                </li>
-                <li className="mb-3">
-                  <p>For cancellations made <span className="fw-bold">45 to 0 days</span> before the tour start date:</p>
-                  <ul className="list-unstyled ps-4">
-                    <li><p><span className="fw-bold">100%</span> of the total tour price will be charged as a cancellation fee.</p></li>
-                  </ul>
-                </li>
-                <li className="mb-3"><p>If a Guest experiences unforeseen circumstances (e.g., medical emergencies, travel restrictions, or natural disasters), they must provide valid documentation to request a refund or rebooking assistance under the Extenuating Circumstances Policy.</p></li>
-                <li className="mb-3"><p>Refunds will be processed within 14 business days after the cancellation request is approved, based on the applicable policy.</p></li>
-                <li className="mb-3"><p>Guests who repeatedly cancel bookings without valid reasons may face account reviews or restrictions.</p></li>
+              <h3 className="h5 fw-bold text-muted">1.1 Personal Information</h3>
+              <p>We may collect personal information that you voluntarily provide to us when you:</p>
+              <ul>
+                <li>Register for an account</li>
+                <li>Make a booking or reservation</li>
+                <li>Contact us for customer support</li>
+                <li>Subscribe to our newsletter</li>
+                <li>Participate in surveys or promotions</li>
+                <li>Submit reviews or feedback</li>
               </ul>
               
-              <h2 className="h4 fw-bold">3. Your Responsibilities and Assumption of Risk.</h2>
-              <p>You are responsible and liable for your own acts and omissions and are also responsible for the acts and omissions of anyone you invite to join or provide access to any Accommodation, Experience, Transportation, or other Tour Operator Service. For example, this means: (i) you are responsible for leaving an Accommodation (and related personal property) in the condition it was in when you arrived, (ii) you are responsible for paying all reasonable Damage Claim amounts necessary to cover damage that you, your guest(s), or your pet(s) cause to an Accommodation, and (iii) you must act with integrity, treat others with respect, and comply with applicable laws at all times. If you are booking for an additional guest who is a minor or if you bring a minor to a Accommodation, Tour Operator, or Transportation Partner, you must be legally authorized to act on behalf of the minor and you are solely responsible for the supervision of that minor.</p>
+              <p>This information may include:</p>
+              <ul>
+                <li>Name and contact information (email address, phone number, mailing address)</li>
+                <li>Date of birth and age</li>
+                <li>Payment information (credit card details, billing address)</li>
+                <li>Passport and travel document information</li>
+                <li>Travel preferences and special requirements</li>
+                <li>Emergency contact information</li>
+                <li>Profile photo and biographical information</li>
+              </ul>
               
-              <h3 className="h5 fw-bold text-muted">3.1 Your Assumption of Risk</h3>
-              <p>You acknowledge that many activities carry inherent risks and agree that, to the maximum extent permitted by applicable law, you assume the entire risk arising out of your access to and use of the Pipitsafaris Platform and any Content (as defined in Section 11), including your stay at any Accommodation, participation in any Experience, use of any other Tour Operator Service, or any other interaction you have with other Members whether in person or online. This means it is your responsibility to investigate a Tour Operator Service (Operator), Accommodation and Transportation Companies to determine whether it is suitable for you. For example, Tour Operator Services may carry a risk of illness, bodily injury, disability, or death, and you freely and willfully assume those risks by choosing to participate in those Tour Operator Services.</p>
+              <h3 className="h5 fw-bold text-muted">1.2 Automatically Collected Information</h3>
+              <p>When you use the Pipitsafaris Platform, we automatically collect certain information about your device and usage patterns, including:</p>
+              <ul>
+                <li>IP address and geographic location</li>
+                <li>Browser type and version</li>
+                <li>Device information (type, operating system, unique device identifiers)</li>
+                <li>Pages visited and time spent on our platform</li>
+                <li>Referring website or application</li>
+                <li>Search queries and booking history</li>
+              </ul>
               
-              <h2 className="h4 fw-bold">4. Passports and Visa</h2>
-              <p>It is your responsibility to ensure that all necessary travel documentation, permits and/or visa regulations are met for any countries you intend to visit or transit through. The Company can provide advice and guidance on these areas but ultimately it is your responsibility to ensure any regulations are met. You will need a full 10-year passport to travel which is valid for six months after the date of your return. Some destinations also require visas, and you should contact the Embassy or Consulate of the country which you are planning to visit in good time before you travel. All children should travel on full passports. Your passport must have sufficient blank visa pages available in accordance with the requirements of the countries you intend to visit. If there is insufficient space in the passport entry will be denied and the person is likely to be detained pending return to their country of origin.</p>
+              <h3 className="h5 fw-bold text-muted">1.3 Cookies and Tracking Technologies</h3>
+              <p>We use cookies, web beacons, and similar tracking technologies to enhance your experience on our platform. These technologies help us:</p>
+              <ul>
+                <li>Remember your preferences and settings</li>
+                <li>Analyze website traffic and usage patterns</li>
+                <li>Provide personalized content and recommendations</li>
+                <li>Deliver targeted advertising</li>
+                <li>Improve our services and user experience</li>
+              </ul>
               
-              <p>Please ensure that all passports are renewed timeously. The client must ensure that the details are supplied to Pipitsafaris mirror those details shown on their passport for international travel and ID documents for local travel. As a guideline, passports should be valid for 6 (six) months after your scheduled departure from the countries you are visiting, please note that a visa does not guarantee entry to any given country at point of entry and boarding of an aircraft may be denied at any point even if you have a valid visa. Furthermore, caution should be taken when your countries of transit or final destination issue a visa on arrival.</p>
+              <h2 className="h4 fw-bold">2. How We Use Your Information</h2>
+              <p>We use the information we collect for various purposes, including:</p>
               
-              <h2 className="h4 fw-bold">5. Health and Safety</h2>
-              <p>You must ensure you meet the immunization, inoculation and medication regulations of any country you visit and it is suggested that you liaise with the relevant consulates and embassies for up-to-date information in good time before your departure and, if particular health issues are prevalent in any country included in your itinerary, consult medical practitioners that are familiar with it. The Company can provide advice and guidance on these areas but ultimately it is your responsibility to ensure any regulations are met.</p>
+              <h3 className="h5 fw-bold text-muted">2.1 Service Provision</h3>
+              <ul>
+                <li>Processing bookings and reservations</li>
+                <li>Facilitating communication between guests and tour operators</li>
+                <li>Providing customer support and assistance</li>
+                <li>Sending booking confirmations and updates</li>
+                <li>Processing payments and refunds</li>
+              </ul>
               
-              <p>Pipitsafaris cannot accept responsibility and no credit or refunds will be given if you fail to take up any component of your trip. No credit or refunds will be given for lost, mislaid, or destroyed travel documents. Most people go on vacation for rest and relaxation, so if in our reasonable opinion or that of any hotel manager, tour leader or other person in authority, your behavior is causing danger, damage to property or persistently affecting the enjoyment of others, we reserve the right to terminate your vacation. Should this happen no refund or compensation would be paid. The Client indemnifies and holds harmless Pipitsafaris against damages suffered and/or costs incurred by Pipitsafaris and/or any third party as a result of a breach of this clause.</p>
+              <h3 className="h5 fw-bold text-muted">2.2 Platform Improvement</h3>
+              <ul>
+                <li>Analyzing usage patterns to improve our services</li>
+                <li>Developing new features and functionalities</li>
+                <li>Personalizing your experience and recommendations</li>
+                <li>Conducting research and analytics</li>
+              </ul>
               
-              <h2 className="h4 fw-bold">6. Special Requests</h2>
-              <p>Special Requests, such as diet, room location, twin- or double-bedded room, or a particular facility which are an important factor in the choice of trip, should be indicated on the Booking Form or made in writing. We will pass your request on to the hotel or other service provider but cannot guarantee that it will be accommodated. The Company will try to arrange for Special Requests to be met, but cannot guarantee that they will be, nor will the Company be liable if any Special Request is met. The provision of any Special Request does not constitute a term of your contract with us unless we have confirmed in writing that your requirement will be met.</p>
+              <h3 className="h5 fw-bold text-muted">2.3 Communication</h3>
+              <ul>
+                <li>Sending promotional emails and newsletters (with your consent)</li>
+                <li>Providing important service updates and notifications</li>
+                <li>Responding to your inquiries and feedback</li>
+                <li>Conducting surveys and gathering feedback</li>
+              </ul>
               
-              <h2 className="h4 fw-bold">7. Insurance</h2>
-              <p>It is a condition of booking that you and all members of your party have comprehensive insurance and that it is adequate for your needs. Your policy of insurance should provide coverage for personal injury, death, medical and repatriation costs in the countries which you intend to visit, together with cover for loss of baggage and valuables, personal liability, delay, cancellation, curtailments, missed departure and legal expenses. Please note these are suggestions only and it does not constitute an exhaustive list. We also strongly recommend the purchase of additional cancel for any reason coverage, where available. Note that special insurance may be required if you intend to undertake any dangerous or sports activities.</p>
+              <h3 className="h5 fw-bold text-muted">2.4 Legal and Safety</h3>
+              <ul>
+                <li>Complying with legal obligations and regulations</li>
+                <li>Preventing fraud and ensuring platform security</li>
+                <li>Protecting the rights and safety of our users</li>
+                <li>Resolving disputes and enforcing our terms</li>
+              </ul>
               
-              <h2 className="h4 fw-bold">8. Illness and Disability</h2>
-              <p>If you or any member of your party suffers from a disability or other medical condition or is taking prescribed medication that may impact on the member's participation in the trip and/or activities, please tell us before you book. The Company is happy to give you advice and to try to assist you in choosing a vacation that will meet your requirements. However, most of our vacations are in destinations which are off the beaten track and lack even the simplest facilities for disabled guests such as ramps for wheelchairs, lifts and so on. Many of our vacations require a fair degree of physical fitness. Medical facilities may not be readily available.</p>
+              <h2 className="h4 fw-bold">3. How We Share Your Information</h2>
+              <p>We may share your information in the following circumstances:</p>
+              
+              <h3 className="h5 fw-bold text-muted">3.1 Tour Operators and Service Providers</h3>
+              <p>When you make a booking, we share necessary information with tour operators, accommodations, transportation providers, and other third-party service providers to facilitate your reservation and ensure proper service delivery.</p>
+              
+              <h3 className="h5 fw-bold text-muted">3.2 Business Partners</h3>
+              <p>We may share information with trusted business partners who help us operate our platform, process payments, provide customer support, or deliver services to you.</p>
+              
+              <h3 className="h5 fw-bold text-muted">3.3 Legal Requirements</h3>
+              <p>We may disclose your information when required by law, court order, or government regulation, or when we believe disclosure is necessary to:</p>
+              <ul>
+                <li>Comply with legal processes</li>
+                <li>Protect our rights and property</li>
+                <li>Ensure user safety and prevent fraud</li>
+                <li>Investigate potential violations of our terms</li>
+              </ul>
+              
+              <h3 className="h5 fw-bold text-muted">3.4 Business Transfers</h3>
+              <p>In the event of a merger, acquisition, or sale of assets, your information may be transferred to the acquiring entity as part of the business transaction.</p>
+              
+              <h2 className="h4 fw-bold">4. Data Security</h2>
+              <p>We implement appropriate technical and organizational security measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction. These measures include:</p>
+              <ul>
+                <li>Encryption of sensitive data in transit and at rest</li>
+                <li>Secure payment processing systems</li>
+                <li>Regular security assessments and updates</li>
+                <li>Access controls and employee training</li>
+                <li>Monitoring for suspicious activity</li>
+              </ul>
+              
+              <p>However, no method of transmission over the internet or electronic storage is 100% secure. While we strive to protect your information, we cannot guarantee absolute security.</p>
+              
+              <h2 className="h4 fw-bold">5. Your Rights and Choices</h2>
+              <p>Depending on your location, you may have certain rights regarding your personal information:</p>
+              
+              <h3 className="h5 fw-bold text-muted">5.1 Access and Correction</h3>
+              <p>You have the right to access, update, or correct your personal information. You can do this through your account settings or by contacting us directly.</p>
+              
+              <h3 className="h5 fw-bold text-muted">5.2 Data Portability</h3>
+              <p>You may request a copy of your personal information in a structured, commonly used format.</p>
+              
+              <h3 className="h5 fw-bold text-muted">5.3 Deletion</h3>
+              <p>You may request that we delete your personal information, subject to certain legal and operational requirements.</p>
+              
+              <h3 className="h5 fw-bold text-muted">5.4 Marketing Communications</h3>
+              <p>You can opt out of receiving promotional communications from us by:</p>
+              <ul>
+                <li>Clicking the unsubscribe link in our emails</li>
+                <li>Updating your communication preferences in your account</li>
+                <li>Contacting us directly</li>
+              </ul>
+              
+              <h3 className="h5 fw-bold text-muted">5.5 Cookies</h3>
+              <p>You can control cookies through your browser settings. However, disabling cookies may affect the functionality of our platform.</p>
+              
+              <h2 className="h4 fw-bold">6. Data Retention</h2>
+              <p>We retain your personal information for as long as necessary to provide our services, comply with legal obligations, resolve disputes, and enforce our agreements. The retention period varies depending on the type of information and the purpose for which it was collected.</p>
+              
+              <h2 className="h4 fw-bold">7. International Data Transfers</h2>
+              <p>Pipitsafaris operates globally, and your information may be transferred to and processed in countries other than your country of residence. We ensure that such transfers comply with applicable data protection laws and implement appropriate safeguards to protect your information.</p>
+              
+              <h2 className="h4 fw-bold">8. Children's Privacy</h2>
+              <p>Our services are not intended for children under 13 years of age. We do not knowingly collect personal information from children under 13. If we become aware that we have collected such information, we will take steps to delete it promptly.</p>
+              
+              <h2 className="h4 fw-bold">9. Third-Party Links</h2>
+              <p>Our platform may contain links to third-party websites or services. We are not responsible for the privacy practices of these third parties. We encourage you to review their privacy policies before providing any personal information.</p>
+              
+              <h2 className="h4 fw-bold">10. Changes to This Privacy Policy</h2>
+              <p>We may update this Privacy Policy from time to time to reflect changes in our practices or applicable laws. We will notify you of any material changes by posting the updated policy on our platform and updating the "Last Updated" date. Your continued use of our services after such changes constitutes acceptance of the updated policy.</p>
+              
+              <h2 className="h4 fw-bold">11. Contact Us</h2>
+              <p>If you have any questions, concerns, or requests regarding this Privacy Policy or our privacy practices, please contact us at:</p>
+              
+              <div className="mt-4 p-4 bg-light rounded">
+                <p className="mb-2"><strong>Pipit Tours and Safaris Limited</strong></p>
+                <p className="mb-2">P.O. Box 10012, Arusha, Tanzania</p>
+                <p className="mb-2">Email: <a href="mailto:info@pipitsafaris.com" className="text-decoration-underline fw-medium">info@pipitsafaris.com</a></p>
+                <p className="mb-0">Phone: +255755188881</p>
+              </div>
               
               <div className="mt-5 pt-4 border-top">
                 <h3 className="h4 fw-bold">Corporate Information</h3>
@@ -203,16 +222,53 @@ const TermsOfService: React.FC = () => {
                       <div className="small fw-bold text-uppercase text-muted">Physical Location</div>
                       <div>Olamuriaki, Sombetini, Arusha</div>
                     </div>
-                    <div className="mb-3">
-                      <div className="small fw-bold text-uppercase text-muted">Email</div>
-                      <div><a href="mailto:info@pipitsafaris.com" className="text-decoration-underline fw-medium">info@pipitsafaris.com</a></div>
-                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </Col>
+        <Col lg={4}>
+                   {/* Right side contact section */}
+              <div className="d-flex flex-column gap-1" style={{ minWidth: '300px' }}>
+                <div className="h3 fw-bold">Still have questions for us?</div>
+                <div>Our team has answers and would love to help.</div>
+                <div className="pt-4">
+                  <a 
+                    href="mailto:info@pipitsafaris.com?subject=Privacy Policy" 
+                    className="text-dark border border-dark px-4 py-2 rounded text-decoration-none d-inline-flex align-items-center"
+                    style={{
+                      transition: 'all 0.3s ease'
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.backgroundColor = '#000';
+                      e.currentTarget.style.color = '#fff';
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.backgroundColor = 'transparent';
+                      e.currentTarget.style.color = '#000';
+                    }}
+                  >
+                    Contact Us
+                    <svg 
+                      aria-hidden="true" 
+                      focusable="false" 
+                      className="ms-2" 
+                      style={{ width: '14px', height: '14px' }}
+                      role="img" 
+                      xmlns="http://www.w3.org/2000/svg" 
+                      viewBox="0 0 320 512"
+                    >
+                      <path 
+                        fill="currentColor" 
+                        d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"
+                      />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+        </Col>
+
       </Row>
     </Container>
     <Footer/>
@@ -220,4 +276,4 @@ const TermsOfService: React.FC = () => {
   );
 };
 
-export default TermsOfService;
+export default PrivacyPolicy;

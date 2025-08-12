@@ -12,7 +12,7 @@ const HeaderWrapper = styled.div`
 
 const HeaderContainer = styled.div`
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-  z-index: 10;
+  z-index: 1000;
   padding: 0.75rem 0;
   width: 100%;
   display: flex;
@@ -22,6 +22,7 @@ const HeaderContainer = styled.div`
   align-content: center;
   top: 0;
   border-bottom: 1px solid #fafafa;
+  position: relative;
 `;
 
 const Container = styled.div`
@@ -115,6 +116,8 @@ const FindTripButton = styled.a`
   color: #171717;
   text-decoration: none;
   transition: all 0.3s ease;
+  white-space: nowrap;
+  flex-shrink: 0;
   
   @media (min-width: 1024px) {
     display: inline-block;
@@ -163,9 +166,7 @@ const SignInButton = styled.button`
   }
 `;
 
-const MobileMenuOverlay = styled.div.withConfig({
-  shouldForwardProp: (prop) => prop !== 'isOpen',
-})<{ isOpen: boolean }>`
+const MobileMenuOverlay = styled.div<{ isOpen: boolean }>`
   display: ${props => props.isOpen ? 'block' : 'none'};
   position: fixed;
   top: 0;
@@ -180,9 +181,7 @@ const MobileMenuOverlay = styled.div.withConfig({
   }
 `;
 
-const MobileMenu = styled.div.withConfig({
-  shouldForwardProp: (prop) => prop !== 'isOpen',
-})<{ isOpen: boolean }>`
+const MobileMenu = styled.div<{ isOpen: boolean }>`
   display: ${props => props.isOpen ? 'block' : 'none'};
   position: fixed;
   top: 0;
@@ -310,7 +309,7 @@ const PageHeader: React.FC = () => {
           <Container>
             <LogoSection>
               <a href="/">
-                <span style={{ fontSize: '1.5rem', fontWeight: 'bold', color: '#333' }}>Pipitsafaris</span>
+                <Logo src="https://pipitsafaris.com/combo-logo-neutral-900.png" alt="Pipitsafaris" />
               </a>
             </LogoSection>
 
@@ -351,7 +350,7 @@ const PageHeader: React.FC = () => {
         <MobileMenu isOpen={isMobileMenuOpen}>
           <MobileMenuContent>
             <MobileHeader>
-              <span style={{ fontSize: '1.5rem', fontWeight: 'bold', color: 'white' }}>Pipitsafaris</span>
+              <MobileLogoWhite src="/combo-logo-white.png" alt="Pipitsafaris" />
               <CloseIcon
                 onClick={closeMobileMenu}
                 aria-hidden="true"
