@@ -263,15 +263,15 @@ const HeroSection: React.FC = () => {
             <TextContent>
               <TextGroup>
                 <MainTitle>
-                  Selling safaris, made simple.
+                  Experience Authentic African Safaris with PipitSafari.
                 </MainTitle>
                 <Subtitle>
-                  An advisor platform for flexible, seamless, safari bookings in Africa.
+                  Expert safari specialists crafting unforgettable wildlife adventures, cultural journeys, and mountain treks across East Africa.
                 </Subtitle>
               </TextGroup>
               
-              <CTAButton href="/sign-up">
-                <div>Try for free</div>
+              <CTAButton href="/plan-safari">
+                <div>Plan Your Safari</div>
               </CTAButton>
             </TextContent>
           </ContentWrapper>

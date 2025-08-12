@@ -160,11 +160,48 @@ const TripDetailPage: React.FC = () => {
                   />
                   {/* View gallery button positioned in bottom-right */}
                   <div className="absolute bottom-4 right-4">
-                    <Button variant="outline-light" className="view-gallery-btn bg-black bg-opacity-50 text-white border-white hover:bg-opacity-70">
+                    <button 
+                      className="view-gallery-btn"
+                      style={{
+                        backgroundColor: 'rgba(0, 0, 0, 0.7)',
+                        color: 'white',
+                        border: '1px solid rgba(255, 255, 255, 0.3)',
+                        borderRadius: '8px',
+                        padding: '8px 16px',
+                        display: 'flex',
+                        alignItems: 'center',
+                        gap: '8px',
+                        fontSize: '14px',
+                        fontWeight: '500',
+                        cursor: 'pointer',
+                        transition: 'all 0.2s ease',
+                        backdropFilter: 'blur(4px)'
+                      }}
+                      onMouseEnter={(e) => {
+                        e.currentTarget.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';
+                        e.currentTarget.style.transform = 'translateY(-1px)';
+                      }}
+                      onMouseLeave={(e) => {
+                        e.currentTarget.style.backgroundColor = 'rgba(0, 0, 0, 0.7)';
+                        e.currentTarget.style.transform = 'translateY(0)';
+                      }}
+                    >
                       <span className="d-block d-sm-none">Gallery</span>
                       <span className="d-none d-sm-block">View gallery</span>
-                      <i className="fas fa-images ms-2"></i>
-                    </Button>
+                      <svg 
+                        width="16" 
+                        height="16" 
+                        viewBox="0 0 24 24" 
+                        fill="none" 
+                        stroke="currentColor" 
+                        strokeWidth="2"
+                        style={{ marginLeft: '4px' }}
+                      >
+                        <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                        <circle cx="8.5" cy="8.5" r="1.5"/>
+                        <polyline points="21,15 16,10 5,21"/>
+                      </svg>
+                    </button>
                   </div>
                 </div>
                 {/* Mobile view - show only first image */}
@@ -176,10 +213,47 @@ const TripDetailPage: React.FC = () => {
                   />
                   {/* Mobile view gallery button */}
                   <div className="absolute bottom-4 right-4">
-                    <Button variant="outline-light" size="sm" className="view-gallery-btn bg-black bg-opacity-50 text-white border-white hover:bg-opacity-70 px-2 py-1">
+                    <button 
+                      className="view-gallery-btn"
+                      style={{
+                        backgroundColor: 'rgba(0, 0, 0, 0.7)',
+                        color: 'white',
+                        border: '1px solid rgba(255, 255, 255, 0.3)',
+                        borderRadius: '8px',
+                        padding: '6px 12px',
+                        display: 'flex',
+                        alignItems: 'center',
+                        gap: '6px',
+                        fontSize: '12px',
+                        fontWeight: '500',
+                        cursor: 'pointer',
+                        transition: 'all 0.2s ease',
+                        backdropFilter: 'blur(4px)'
+                      }}
+                      onMouseEnter={(e) => {
+                        e.currentTarget.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';
+                        e.currentTarget.style.transform = 'translateY(-1px)';
+                      }}
+                      onMouseLeave={(e) => {
+                        e.currentTarget.style.backgroundColor = 'rgba(0, 0, 0, 0.7)';
+                        e.currentTarget.style.transform = 'translateY(0)';
+                      }}
+                    >
                       <span className="d-block">Gallery</span>
-                      <i className="fas fa-images ms-2"></i>
-                    </Button>
+                      <svg 
+                        width="14" 
+                        height="14" 
+                        viewBox="0 0 24 24" 
+                        fill="none" 
+                        stroke="currentColor" 
+                        strokeWidth="2"
+                        style={{ marginLeft: '2px' }}
+                      >
+                        <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                        <circle cx="8.5" cy="8.5" r="1.5"/>
+                        <polyline points="21,15 16,10 5,21"/>
+                      </svg>
+                    </button>
                   </div>
                 </div>
               </div>

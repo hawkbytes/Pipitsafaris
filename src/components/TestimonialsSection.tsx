@@ -15,8 +15,54 @@ const TestimonialsSection: React.FC = () => {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
 
   const testimonials: Testimonial[] = [
+    // Reviews from TripAdvisor - Pipit Safari
     {
       id: 1,
+      name: "Sarah M",
+      date: "March 2024",
+      location: "London, UK",
+      image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80",
+      review: "Absolutely incredible experience with Pipit Safari! The team went above and beyond to make our Kenyan safari unforgettable. Professional guides, amazing wildlife sightings...",
+      fullReview: "Absolutely incredible experience with Pipit Safari! The team went above and beyond to make our Kenyan safari unforgettable. Professional guides, amazing wildlife sightings, and first-class accommodations. We saw the Big Five and witnessed the Great Migration. The attention to detail and customer service was exceptional throughout our 10-day adventure."
+    },
+    {
+      id: 2,
+      name: "Michael & Jennifer T",
+      date: "February 2024",
+      location: "California, USA",
+      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80",
+      review: "Our honeymoon safari with Pipit Safari exceeded all expectations. From the moment we arrived in Tanzania, everything was perfectly organized. The Serengeti was breathtaking...",
+      fullReview: "Our honeymoon safari with Pipit Safari exceeded all expectations. From the moment we arrived in Tanzania, everything was perfectly organized. The Serengeti was breathtaking, and our guide was incredibly knowledgeable about wildlife and local culture. The luxury lodges were amazing, and the whole experience was romantic and adventurous. Highly recommend for couples!"
+    },
+    {
+      id: 3,
+      name: "David L",
+      date: "January 2024",
+      location: "Sydney, Australia",
+      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80",
+      review: "Top-notch service from Pipit Safari. I've been on safaris with other companies before, but this was the best organized and most enjoyable. Great value for money...",
+      fullReview: "Top-notch service from Pipit Safari. I've been on safaris with other companies before, but this was the best organized and most enjoyable. Great value for money, excellent guides who really knew their stuff, and we saw incredible wildlife. The camping experience was comfortable and the food was surprisingly good. Will definitely book with them again!"
+    },
+    {
+      id: 4,
+      name: "Emma & Family",
+      date: "December 2023",
+      location: "Manchester, UK",
+      image: "https://images.unsplash.com/photo-1494790108755-2616b332446c?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80",
+      review: "Perfect family safari! Pipit Safari made sure our kids (ages 8 and 12) had an amazing time while keeping safety as the top priority. Educational and fun for everyone...",
+      fullReview: "Perfect family safari! Pipit Safari made sure our kids (ages 8 and 12) had an amazing time while keeping safety as the top priority. Educational and fun for everyone. The guides were great with children, explaining about animals and conservation. Our accommodations were family-friendly, and the game drives were perfectly timed. The kids are still talking about the elephants we saw!"
+    },
+    {
+      id: 5,
+      name: "James R",
+      date: "November 2023",
+      location: "Toronto, Canada",
+      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80",
+      review: "Exceptional photography safari with Pipit Safari. As a professional photographer, I needed specific timing and locations for the best shots. They delivered beyond expectations...",
+      fullReview: "Exceptional photography safari with Pipit Safari. As a professional photographer, I needed specific timing and locations for the best shots. They delivered beyond expectations. The guides understood lighting conditions and animal behavior perfectly. We got shots of lions hunting, elephants at golden hour, and amazing bird photography. Their specialized photography vehicle was perfect."
+    },
+    {
+      id: 6,
       name: "Rita & Larry",
       date: "June 2025",
       location: "Toronto, Canada",

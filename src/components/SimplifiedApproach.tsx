@@ -22,9 +22,11 @@ const SimplifiedApproach: React.FC = () => {
               alt="Curated safaris illustration"
             />
           </FeatureIcon>
-          <FeatureTitle>Curated or custom, commissionable safaris</FeatureTitle>
+          <FeatureTitle>Authentic safari experiences, expertly crafted</FeatureTitle>
           <FeatureDescription>
-            Ditch the endless emails and planning threads. Our curated, multi-day safaris are advisor-ready, commissionable, and designed for instant pitching. You book, we take care of the rest.
+            Skip the endless research and complex planning. Our expertly curated, multi-day safari adventures are 
+            ready to book, professionally guided, and designed for unforgettable wildlife experiences. You choose 
+            your adventure, we handle every detail from start to finish.
           </FeatureDescription>
         </FeatureCard>
 
@@ -35,9 +37,11 @@ const SimplifiedApproach: React.FC = () => {
               alt="Transparent pricing illustration"
             />
           </FeatureIcon>
-          <FeatureTitle>Transparent, direct-to-DMC pricing</FeatureTitle>
+          <FeatureTitle>Transparent, fair safari pricing</FeatureTitle>
           <FeatureDescription>
-            No hidden markups or middlemen. Get instant access to clear, commissionable rates straight from the source so you can quote with confidence and close faster.
+            No hidden fees or surprise costs. Get clear, upfront pricing for all safari packages, accommodations, 
+            and activities. We work directly with trusted local partners to offer competitive rates while ensuring 
+            quality experiences and fair compensation for local communities.
           </FeatureDescription>
         </FeatureCard>
 
