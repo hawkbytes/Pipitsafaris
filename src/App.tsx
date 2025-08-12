@@ -185,7 +185,7 @@ function App() {
     {
       name: "KENYA", 
       description: "The heart of safari adventures",
-      image: "https://images.unsplash.com/photo-1549366021-9f761d040a94?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      image: "/images/istockphoto-697689066-612x612.jpg"
     },
     {
       name: "UGANDA",
