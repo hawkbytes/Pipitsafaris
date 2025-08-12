@@ -195,15 +195,8 @@ const Header: React.FC = () => {
     <HeaderContainer>
       <Container>
         <LogoSection>
-          <a href="/">
-            <div style={{ 
-              fontSize: '1.5rem', 
-              fontWeight: 'bold', 
-              color: 'white',
-              fontFamily: 'sans-serif'
-            }}>
-              Pipitsafaris
-            </div>
+          <a href="/" style={{ color: 'white', textDecoration: 'none', fontSize: '1.5rem', fontWeight: 'bold' }}>
+            Pipitsafaris
           </a>
         </LogoSection>
 
