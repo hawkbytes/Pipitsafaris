@@ -10,7 +10,6 @@ import {
   SocialIcons,
   SocialIcon,
   TicoSection,
-  TicoLogo,
   TicoText,
   FooterColumns,
   FooterColumn,

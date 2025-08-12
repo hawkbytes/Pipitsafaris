@@ -48,14 +48,6 @@ const LogoSection = styled.div`
   }
 `;
 
-const Logo = styled.img`
-  height: 1.5rem;
-  
-  @media (min-width: 640px) {
-    height: 1.5rem;
-  }
-`;
-
 const NavigationSection = styled.div`
   display: none;
   
@@ -215,14 +207,6 @@ const MobileHeader = styled.div`
   padding-bottom: 0.75rem;
   justify-content: space-between;
   align-items: center;
-`;
-
-const MobileLogoWhite = styled.img`
-  height: 1.5rem;
-  
-  @media (min-width: 640px) {
-    height: 1.5rem;
-  }
 `;
 
 const CloseIcon = styled.svg`

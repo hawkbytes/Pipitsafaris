@@ -182,7 +182,7 @@ interface HotelFilterHeaderProps {
   onFilterChange?: (filters: any) => void;
 }
 
-const HotelFilterHeader: React.FC<HotelFilterHeaderProps> = ({ onFilterChange }) => {
+const HotelFilterHeader: React.FC<HotelFilterHeaderProps> = ({ onFilterChange: _ }) => {
   const [selectedType, setSelectedType] = useState<string>('');
   const [selectedPrice, setSelectedPrice] = useState<string>('');
   const [bookableOnly, setBookableOnly] = useState<boolean>(false);

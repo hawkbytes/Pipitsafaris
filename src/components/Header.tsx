@@ -36,14 +36,6 @@ const LogoSection = styled.div`
   }
 `;
 
-const Logo = styled.img`
-  height: 1.5rem;
-  
-  @media (min-width: 640px) {
-    height: 1.5rem;
-  }
-`;
-
 const NavigationSection = styled.div`
   display: none;
   

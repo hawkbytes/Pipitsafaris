@@ -26,7 +26,6 @@ import {
 } from './styles/AppStyles'
 
 import {
-  ResponsiveContainer,
   TravelersContainer,
   RoomCard,
   RoomTitle,
@@ -46,13 +45,6 @@ import {
   TripTypeSubtitle,
   TripTypeButtonsContainer,
   TripTypeButton,
-  ContactContainer,
-  ContactFormCard,
-  FormGrid,
-  FormField,
-  FormLabel,
-  FormInput,
-  FormTextarea,
   HelperText,
   HelperButton
 } from './styles/ResponsiveComponents'
